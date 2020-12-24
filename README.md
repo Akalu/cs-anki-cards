@@ -19,7 +19,7 @@ This project is intended to deploy to production, for development purposes chang
 }
 ```
 
-## Development server
+## Development
 
 Here are all initial steps to generate the skeleton of Angular project with Material Design styling:
 
