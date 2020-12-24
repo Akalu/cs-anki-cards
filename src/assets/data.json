@@ -1,0 +1,1394 @@
+﻿[
+  {
+    "id": 2,
+    "formulation": "Data structures e.g. Stack vs queue",
+    "category": 2,
+    "answer": "See Java API reference"
+  },
+  {
+    "id": 3,
+    "formulation": "Boolean operations, short circuits in Boolean operations",
+    "category": 2,
+    "answer": "The && and || operators \"short-circuit\", meaning they don't evaluate the right-hand side if it isn't necessary.\n\nThe & and | operators, when used as logical operators, always evaluate both sides.\n\nThere is only one case of short-circuiting for each operator, and they are:\n\nfalse && ... - it is not necessary to know what the right-hand side is because the result can only be false regardless of the value there\ntrue || ... - it is not necessary to know what the right-hand side is because the result can only be true regardless of the value there"
+  },
+  {
+    "id": 4,
+    "formulation": "Complexity of algorithms, big O notation (can be discussed during coding task)",
+    "category": 2,
+    "answer": ""
+  },
+  {
+    "id": 5,
+    "formulation": "Trees, graphs and ways to traverse graph",
+    "category": 2,
+    "answer": "Pre-order, Post-order, In-order"
+  },
+  {
+    "id": 6,
+    "formulation": "Sorting algorithms",
+    "category": 2,
+    "answer": "Selection Sort\nBubble Sort\nInsertion Sort\nMerge Sort\nQuick Sort\nHeap Sort\nCounting Sort\nRadix Sort\nBucket Sort"
+  },
+  {
+    "id": 7,
+    "formulation": "Recursion, tail recursion, mutual recursion",
+    "category": 2,
+    "answer": "Linear Recursive\nA linear recursive function is a function that only makes a single call to itself each time the function runs (as opposed to one that would call itself multiple times during its execution). The factorial function is a good example of linear recursion. \nTail recursive\nTail recursion is a form of linear recursion. In tail recursion, the recursive call is the last thing the function does. Often, the value of the recursive call is returned. As such, tail recursive functions can often be easily implemented in an iterative manner; by taking out the recursive call and replacing it with a loop, the same effect can generally be achieved. In fact, a good compiler can recognize tail recursion and convert it to iteration in order to optimize the performance of the code. \nBinary Recursive\nSome recursive functions don't just have one call to themself, they have two (or more). Functions with two recursive calls are referred to as binary recursive functions. Mutual Recursion\nA recursive function doesn't necessarily need to call itself. Some recursive functions work in pairs or even larger groups. For example, function A calls function B which calls function C which in turn calls function A.\nA simple example of mutual recursion is a set of function to determine whether an integer is even or odd. How do we know if a number is even? Well, we know 0 is even. And we also know that if a number n is even, then n - 1 must be odd. How do we know if a number is odd? It's not even!"
+  },
+  {
+    "id": 8,
+    "formulation": "Binary tree / Self balanced trees (Red-black tree, AVL, Splay)",
+    "category": 2,
+    "answer": ""
+  },
+  {
+    "id": 9,
+    "formulation": "Search in binary tree",
+    "category": 2,
+    "answer": ""
+  },
+  {
+    "id": 10,
+    "formulation": "Linear-time sorting. (count sort)",
+    "category": 2,
+    "answer": "counting sort is an algorithm for sorting a collection of objects according to keys that are small integers; that is, it is an integer sorting algorithm. It operates by counting the number of objects that have each distinct key value, and using arithmetic on those counts to determine the positions of each key value in the output sequence. Its running time is linear in the number of items and the difference between the maximum and minimum key values, so it is only suitable for direct use in situations where the variation in keys is not significantly greater than the number of items."
+  },
+  {
+    "id": 11,
+    "formulation": "Sorting of linked list.",
+    "category": 2,
+    "answer": ""
+  },
+  {
+    "id": 12,
+    "formulation": "Prefix and suffix trees",
+    "category": 2,
+    "answer": "A prefix tree is also known as a Trie; it is used to optimize the search complexities. If we search keys or words in a Binary Search Tree (BST) then the time complexity could go up to O (M * log N) whereas M is length of the words inserted and N is the total number of words inserted in the tree. However, when the prefix tree is used the search time complexity is reduced to O(M)."
+  },
+  {
+    "id": 13,
+    "formulation": "Describe heap",
+    "category": 2,
+    "answer": ""
+  },
+  {
+    "id": 14,
+    "formulation": "Greedy Algorithm",
+    "category": 2,
+    "answer": "A greedy algorithm is a simple, intuitive algorithm that is used in optimization problems. The algorithm makes the optimal choice at each step as it attempts to find the overall optimal way to solve the entire problem. Greedy algorithms are quite successful in some problems, such as Huffman encoding which is used to compress data, or Dijkstra's algorithm, which is used to find the shortest path through a graph.\n\nHowever, in many problems, a greedy strategy does not produce an optimal solution."
+  },
+  {
+    "id": 15,
+    "formulation": "NP-complete algorithms",
+    "category": 2,
+    "answer": "Decision problem: A problem with a yes or no answer.\nNow, let us define those complexity classes.\n\nP\nP is a complexity class that represents the set of all decision problems that can be solved in polynomial time.\n\nThat is, given an instance of the problem, the answer yes or no can be decided in polynomial time.\n\nExample\n\nGiven a connected graph G, can its vertices be coloured using two colours so that no edge is monochromatic?\n\nAlgorithm: start with an arbitrary vertex, color it red and all of its neighbours blue and continue. Stop when you run out of vertices or you are forced to make an edge have both of its endpoints be the same color.\n\nNP\nNP is a complexity class that represents the set of all decision problems for which the instances where the answer is \"yes\" have proofs that can be verified in polynomial time.\n\nThis means that if someone gives us an instance of the problem and a certificate (sometimes called a witness) to the answer being yes, we can check that it is correct in polynomial time.\n\nExample\n\nInteger factorisation is in NP. This is the problem that given integers n and m, is there an integer f with 1 < f < m, such that f divides n (f is a small factor of n)?\n\nThis is a decision problem because the answers are yes or no. If someone hands us an instance of the problem (so they hand us integers n and m) and an integer f with 1 < f < m, and claim that f is a factor of n (the certificate), we can check the answer in polynomial time by performing the division n / f.\n\nNP-Complete\nNP-Complete is a complexity class which represents the set of all problems X in NP for which it is possible to reduce any other NP problem Y to X in polynomial time.\n\nIntuitively this means that we can solve Y quickly if we know how to solve X quickly. Precisely, Y is reducible to X, if there is a polynomial time algorithm f to transform instances y of Y to instances x = f(y) of X in polynomial time, with the property that the answer to y is yes, if and only if the answer to f(y) is yes.\nNP-Hard\nTravelling salesman, Knapsack problem"
+  },
+  {
+    "id": 16,
+    "formulation": "Map/reduce and divide and conquer approach in solving tasks",
+    "category": 2,
+    "answer": ""
+  },
+  {
+    "id": 17,
+    "formulation": "Dynamic programming",
+    "category": 2,
+    "answer": ""
+  },
+  {
+    "id": 18,
+    "formulation": "How would you fix a cyclic dependency",
+    "category": 2,
+    "answer": ""
+  },
+  {
+    "id": 19,
+    "formulation": "What is the difference between static and dynamic typing? Duck typing?",
+    "category": 2,
+    "answer": "Dynamic typing means you don't need to define the type of a variable, the language interpreter will try to guess the type of that variable (number, boolean, string etc).\nStatic Typing is opposite to Dynamic Typing. In Static Typing, type checking is performed during compile time. It means that the type of a variable is known at compile time. For some languages, the programmer must specify what type each variable is (e.g C, C++, Java), other languages offer some form of type inference(e.g. Scala, Haskell).\nWith Static Typing, variables generally are not allowed to change types.\nDuck typing means that we are not interested in what type an object is, instead we are more concerned in the functional aspect of the object: if an object returns those methods we are interested in, then this means that the object satisfy our requirements. Hence the well known phrase: \"if a bird that walks like a duck and swims like a duck and quacks like a duck, that bird is a duck\".\nParametric polymorphism is a way to make a language more expressive, while still maintaining full static type-safety. Using parametric polymorphism, a function or a data type can be written generically so that it can handle values identically without depending on their type."
+  },
+  {
+    "id": 21,
+    "formulation": "General collection interfaces (Collection, Set, Map, List, Queue, SortedSet, SortedMap)",
+    "category": 3,
+    "answer": ""
+  },
+  {
+    "id": 22,
+    "formulation": "Interfaces extending Collection. Is Map part of Collection interface",
+    "category": 3,
+    "answer": "Map interface is a special type of collection which is used to store key-value pairs. It does not extend Collection interface for this reason. This interface provides methods to add, remove, search or iterate over various views of Map.\n\nMain classes implementing Map interface are: HashMap, Hashtable, EnumMap, IdentityHashMap, LinkedHashMap and Properties."
+  },
+  {
+    "id": 23,
+    "formulation": "Difference between ArrayList and LinkedList",
+    "category": 3,
+    "answer": "Difference between ArrayList and LinkedList:\nLinkedList store elements within a doubly-linked list data structure. ArrayList store elements within a dynamically resizing array.\nLinkedList allows for constant-time insertions or removals, but only sequential access of elements. In other words, you can walk the list forwards or backwards, but grabbing an element in the middle takes time proportional to the size of the list. ArrayLists, on the other hand, allow random access, so you can grab any element in constant time. But adding or removing from anywhere but the end requires shifting all the latter elements over, either to make an opening or fill the gap.\nLinkedList has more memory overhead than ArrayList because in ArrayList each index only holds actual object (data) but in case of LinkedList each node holds both data and address of next and previous node."
+  },
+  {
+    "id": 24,
+    "formulation": "Difference between Stack and Queue",
+    "category": 3,
+    "answer": "A collection designed for holding elements prior to processing. Besides basic Collection operations, queues provide additional insertion, extraction, and inspection operations.\nQueues typically, but do not necessarily, order elements in a FIFO (first-in-first-out) manner.\n\nStack is also a form of Queue but one difference, it is LIFO (last-in-first-out).\n\nWhatever the ordering used, the head of the queue is that element which would be removed by a call to remove() or poll(). Also note that Stack and Vector are both synchronized.\n\nUsage: Use a queue if you want to process a stream of incoming items in the order that they are received.Good for work lists and handling requests.\nUse a stack if you want to push and pop from the top of the stack only. Good for recursive algorithms."
+  },
+  {
+    "id": 25,
+    "formulation": "TreeSet vs TreeMap",
+    "category": 3,
+    "answer": ""
+  },
+  {
+    "id": 26,
+    "formulation": "Internal structure of HashMap/Hashtable",
+    "category": 3,
+    "answer": ""
+  },
+  {
+    "id": 27,
+    "formulation": "Requirements for implementation of hashCode to achieve best performance",
+    "category": 3,
+    "answer": "The most important constraint is you must be able to fetch the value object back in future. Otherwise, there is no use of having such a data structure. If you understand the working of hashmap, you will find it largely depends on hashCode() and equals() method of Key objects.\n\nSo a good key object must provide same hashCode() again and again, no matter how many times it is fetched. Similarly, same keys must return true when compare with equals() method and different keys must return false.\n\nFor this reason, immutable classes are considered best candidate for HashMap keys."
+  },
+  {
+    "id": 28,
+    "formulation": "Definition and ways of resolving collisions in hash tables",
+    "category": 3,
+    "answer": ""
+  },
+  {
+    "id": 29,
+    "formulation": "Differences between Hashtable and ConcurrentHashMap",
+    "category": 3,
+    "answer": "Concurrent Hashmap is a class which was introduced in jdk1.5.  Concurrent hash map apply locks only at bucket level called fragment  while adding or updating the map. So, concurrent hash map allows concurrent read and write operation to the map. \n\nHashTable is thread safe legacy class which introduced in the Jdk1.1. It is a base implementation of Map interface. It doesn't allow null key and value. It is synchronized in nature so two different thread can�t access simultaneously. Hashtable does not maintain any order."
+  },
+  {
+    "id": 30,
+    "formulation": "Special versions of collections. EnumSet, EnumMap, WeakHaskMap, IdentityHashMap.",
+    "category": 3,
+    "answer": "The EnumSet is one of the specialized implementation of the Set interface for use with the enumeration type. Few important features of EnumSet are as follows:\n\nIt extends AbstractSet class and implements Set Interface in Java.\nEnumSet class is a member of the Java Collections Framework & is not synchronized.\nIt's a high performance set implementation, much faster than HashSet.\nAll of the elements in an EnumSet must come from a single enumeration type that is specified when the set is created either explicitly or implicitly.\nIt does not allow null Objects and throws NullPointerException if we do so.\nIt uses a fail-safe iterator, so it won't throw ConcurrentModificationException if the collection is modified while iterating.\nIdentityHashMap is similar to HashMap except that it uses reference equality when comparing elements. IdentityHashMap class is not a widely used Map implementation. While this class implements the Map interface, it intentionally violates Map's general contract, which mandates the use of the equals() method when comparing objects. IdentityHashMap is designed for use only in the rare cases wherein reference-equality semantics are required.\n\nWeakHashMap is an implementation of the Map interface that stores only weak references to its keys. Storing only weak references allows a key-value pair to be garbage collected when its key is no longer referenced outside of the WeakHashMap. This class is intended primarily for use with key objects whose equals methods test for object identity using the == operator. Once such a key is discarded it can never be recreated, so it is impossible to do a look-up of that key in a WeakHashMap at some later time and be surprised that its entry has been removed."
+  },
+  {
+    "id": 31,
+    "formulation": "Iterator and modification of a List. ConcurentModificationException. Collections with safe iterators (CopyOnWriteArrayList/CopyOnWriteArraySet)",
+    "category": 3,
+    "answer": "Fail-fast Iterators fail as soon as they realized that structure of Collection has been changed since iteration has begun. Structural changes means adding, removing or updating any element from collection while one thread is Iterating over that collection.\n\nFail-fast behavior is implemented by keeping a modification count and if iteration thread realizes the change in modification count it throws ConcurrentModificationException.\nFail-safe iterators are just opposite to fail-fast. They never fail if you modify the underlying collection on which they are iterating, because they work on clone of Collection instead of original collection and that's why they are called as fail-safe iterator.\n\nIterator of CopyOnWriteArrayList is an example of fail-safe Iterator also iterator written by ConcurrentHashMap keySet is also fail-safe iterator and never throw ConcurrentModificationException.\n\n\nTo avoid ConcurrentModificationException while iterating a collection:\nYou should first try to find another alternative iterator which are fail-safe. For example if you are using List and you can use ListIterator. If it is legacy collection, you can use enumeration.\n\nIf above options are not possible then you can use one of three changes:\n\nIf you are using JDK1.5 or higher then you can use ConcurrentHashMap and CopyOnWriteArrayList classes. It is the recommended approach.\nYou can convert the list to an array and then iterate on the array.\nYou can lock the list while iterating by putting it in a synchronized block.\nPlease note that last two approaches will cause a performance hit."
+  },
+  {
+    "id": 33,
+    "formulation": "Length in bytes/max value for primitive types",
+    "category": 4,
+    "answer": "char: The char data type is a single 16-bit Unicode character, boolean - NA\nbyte 0\nshort 0\nint 0\nlong 0L\nfloat 0.0f\ndouble 0.0d\nchar '\\u0000'\nString (or any object)   null\nboolean false"
+  },
+  {
+    "id": 34,
+    "formulation": "Meaning of keywords: static, final, transient",
+    "category": 4,
+    "answer": ""
+  },
+  {
+    "id": 35,
+    "formulation": "this and super keywords",
+    "category": 4,
+    "answer": "this is a reference to the object typed as the current class, and super is a reference to the object typed as its parent class.\n\nIn the constructor, this() calls a constructor defined in the current class. super() calls a constructor defined in the parent class. The constructor may be defined in any parent class, but it will refer to the one overridden closest to the current class. Calls to other constructors in this way may only be done as the first line in a constructor."
+  },
+  {
+    "id": 36,
+    "formulation": "Contract between equals() and hashCode()",
+    "category": 4,
+    "answer": "If two objects are equal according to the equals(Object) method, then calling the hashcode() method on each of the two objects must produce the same integer result. Over direction is not nesessarily true"
+  },
+  {
+    "id": 37,
+    "formulation": "Access modifiers in Java",
+    "category": 4,
+    "answer": "If a class has no modifier (the default, also known as package-private), it is visible only within its own package"
+  },
+  {
+    "id": 38,
+    "formulation": "Explain strictfp, volatile, transient",
+    "category": 4,
+    "answer": "Modifying classes or methods with strictfp ensures that floating point operations are accurate. Cut off the index that only affects certain operations. When a class is modified by strictfp, all methods are automatically modified by strictfp (the Java compiler and runtime environment within the scope of the declaration will be fully implemented in accordance with the floating-point specification IEEE-754). The volatile modified member variable forces the value of the member variable to be reread from shared memory each time it is accessed by the thread. Also, when a member variable changes, the thread is forced to write the changed value back to shared memory. This way, at any time, two different threads always see the same value of a member variable. If you declare an instance variable with transient, its value does not need to be maintained when the object is stored. It is used to indicate that a domain is not part of the serialization of the object. When an object is serialized, the value of the transient variable is not included in the serialized representation, whereas non-transient variables are included."
+  },
+  {
+    "id": 39,
+    "formulation": "What different between StringBuffer and StringBuilder",
+    "category": 4,
+    "answer": "StringBuffer was the only choice for String manipulation until Java 1.4. But, it has one disadvantage that all of its public methods are synchronized. StringBuffer provides Thread safety but at a performance cost.\n\nIn most of the scenarios, we don't use String in a multithreaded environment. So Java 1.5 introduced a new class StringBuilder, which is similar to StringBuffer except for thread-safety and synchronization.\n\n\nStringBuffer has some extra methods such as substring, length, capacity, trimToSize, etc. However, these are not required since you have all these present in String too. That's why these methods were never implemented in the StringBuilder class.\n\nStringBuffer was introduced in Java 1.0 whereas StringBuilder class was introduced in Java 1.5 after looking at shortcomings of StringBuffer."
+  },
+  {
+    "id": 40,
+    "formulation": "Purpose, types and creation of nested classes",
+    "category": 4,
+    "answer": "Nested classes enable you to logically group classes that are only used in one place, thus this increases the use of encapsulation, and creates more readable and maintainable code.\n\nThe scope of a nested class is bounded by the scope of its enclosing class. Thus in above example, class NestedClass does not exist independently of class OuterClass.\nA nested class has access to the members, including private members, of the class in which it is nested. However, the reverse is not true i.e., the enclosing class does not have access to the members of the nested class.\nA nested class is also a member of its enclosing class.\nAs a member of its enclosing class, a nested class can be declared private, public, protected, or package private(default).\nNested classes are divided into two categories:\n1) static nested class : Nested classes that are declared static are called static nested classes.\n2) inner class : An inner class is a non-static nested class."
+  },
+  {
+    "id": 41,
+    "formulation": "What does it mean that an object or a class is mutable or immutable",
+    "category": 4,
+    "answer": ""
+  },
+  {
+    "id": 42,
+    "formulation": "How to make class immutable",
+    "category": 4,
+    "answer": ""
+  },
+  {
+    "id": 43,
+    "formulation": "Besides String do you know any other immutable classes",
+    "category": 4,
+    "answer": "java.lang.String (already mentioned)\nThe wrapper classes for the primitive types: java.lang.Integer, java.lang.Byte, java.lang.Character, java.lang.Short, java.lang.Boolean, java.lang.Long, java.lang.Double, java.lang.Float\njava.lang.StackTraceElement (used in building exception stacktraces)\nMost enum classes are immutable, but this in fact depends on the concrete case. (Don't implement mutable enums, this will screw you up somewhen.) I think that at least all enum classes in the standard API are in fact immutable.\njava.math.BigInteger and java.math.BigDecimal (at least objects of those classes themselves, subclasses could introduce mutability, though this is not a good idea)\njava.io.File. Note that this represents an object external to the VM (a file on the local system), which may or may not exist, and has some methods modifying and querying the state of this external object. But the File object itself stays immutable. (All other classes in java.io are mutable.)\n\njava.awt.Font - representing a font for drawing text on the screen (there may be some mutable subclasses, but this would certainly not be useful)\njava.awt.Cursor - representing the bitmap for the mouse cursor (here too, some subclasses may be mutable or depending on outer factors)\n\njava.util.Locale - representing a specific geographical, political, or cultural region.\njava.util.UUID - a as much as possible globally unique identifier"
+  },
+  {
+    "id": 44,
+    "formulation": "Rules to create equals method",
+    "category": 4,
+    "answer": ""
+  },
+  {
+    "id": 45,
+    "formulation": "Difference between overriding and overloading",
+    "category": 4,
+    "answer": ""
+  },
+  {
+    "id": 46,
+    "formulation": "How can we replace multi-inheritance pattern in Java",
+    "category": 4,
+    "answer": ""
+  },
+  {
+    "id": 47,
+    "formulation": "Can interface inherit from different interface",
+    "category": 4,
+    "answer": "One interface can inherit another by use of the keyword extends. The syntax is the same as for inheriting classes. When a class implements an interface that inherits another interface, it must provide implementations for all methods defined within the interface inheritance chain."
+  },
+  {
+    "id": 48,
+    "formulation": "What is a marker interface",
+    "category": 4,
+    "answer": "It is an empty interface (no field or methods). Examples of marker interface are Serializable, Clonnable and Remote interface."
+  },
+  {
+    "id": 49,
+    "formulation": "Regular vs. static initialization blocks",
+    "category": 4,
+    "answer": "They're for two very different purposes:\n\n>> The static initializer block will be called on loading of the class, and will have no access to instance variables or methods. As per @Prahalad Deshpande's comment, it is often used to create static variables.\n>> The non-static initializer block on the other hand is created on object construction only, will have access to instance variables and methods, and will be called at the beginning of the constructor, after the super constructor has been called (either explicitly or implicitly) and before any other subsequent constructor code is called."
+  },
+  {
+    "id": 51,
+    "formulation": "Checked vs. unchecked exceptions. Why would one use former or later?",
+    "category": 5,
+    "answer": "the biggest difference between checked and unchecked exceptions is that checked exceptions are forced by compiler and used to indicate exceptional conditions that are out of the control of the program (for example, I/O errors), while unchecked exceptions are occurred during runtime and used to indicate programming errors (for example, a null pointer)\nChecked exceptions can be used when a method cannot do what its name says it does. e.g. A method named prepareSystem() which pre-populate configuration files and do some configuration using them, can declare throwing FileNotFoundException which implies that method uses configuration files from file system.\nChecked exceptions ideally should never be used for programming errors, but absolutely should be used for resource errors and for flow control in such cases.\nThrow only those exceptions which a method can not handle by any mean. Method should first try to handle it as soon as it encounters. Throw the exception only if it is not possible to handle inside method.\nA good way to define method signatures is to declare exceptions close to method name. If your method is named openFile, then it is expected to throw FileNotFoundException?. If your method is named findProvider, then it is expected to throw NoSuchProviderException.\nAlso, these type of exceptions should be made checked exceptions as it forces the caller to deal with the problems that are inherent to the semantic of your methods.\n\nRule is if a client can reasonably be expected to recover from an exception, make it a checked exception. If a client cannot do anything to recover from the exception, make it an unchecked exception."
+  },
+  {
+    "id": 52,
+    "formulation": "Difference in Error and UncheckedException",
+    "category": 5,
+    "answer": "An Error is a subclass of Throwable that indicates serious problems that a reasonable application should not try to catch.\n\nRuntimeException is the superclass of those exceptions that can be thrown during the normal operation of the Java Virtual Machine.\n\nSo, the only difference technically is that they are two different classes. You will only catch both if you declare: catch (Throwable e) { }\nBut there is a big difference in how they are intended to be used. Unchecked exceptions (RuntimeExceptions) are intended to deal with programming errors and other unexpected problems, but should be caught and handled in the application. Errors are intended to represent problems that the program cannot deal with, such as running out of memory."
+  },
+  {
+    "id": 53,
+    "formulation": "Could we have only try and finally without catch",
+    "category": 5,
+    "answer": "yes"
+  },
+  {
+    "id": 54,
+    "formulation": "Cases when the finally block isn't executed",
+    "category": 5,
+    "answer": ""
+  },
+  {
+    "id": 55,
+    "formulation": "What is exception handling mechanism",
+    "category": 5,
+    "answer": ""
+  },
+  {
+    "id": 56,
+    "formulation": "Java Exceptions API",
+    "category": 5,
+    "answer": ""
+  },
+  {
+    "id": 57,
+    "formulation": "How to avoid catch block",
+    "category": 5,
+    "answer": "1) use unchecked exceptions 2) add throws clause to method definition"
+  },
+  {
+    "id": 58,
+    "formulation": "What is Multi-Catch     catch (ClassCastException | IOException e)",
+    "category": 5,
+    "answer": ""
+  },
+  {
+    "id": 59,
+    "formulation": "What is try-with-resources",
+    "category": 5,
+    "answer": ""
+  },
+  {
+    "id": 60,
+    "formulation": "What are Suppressed exceptions",
+    "category": 5,
+    "answer": "Suppressed exceptions are additional exceptions that occur within a try-with-resources statement (introduced in Java 7) when AutoCloseable resources are closed. Because multiple exceptions may occur while closing AutoCloseable resources, additional exceptions are attached to a primary exception as suppressed exceptions."
+  },
+  {
+    "id": 61,
+    "formulation": "NoClassDefFoundError vs ClassNotFoundException",
+    "category": 5,
+    "answer": "NoClassDefFoundError\n\nThrown if the Java Virtual Machine or a ClassLoader instance tries to load in the definition of a class (as part of a normal method call or as part of creating a new instance using the new expression) and no definition of the class could be found.\nThe searched-for class definition existed when the currently executing class was compiled, but the definition can no longer be found.\n\nClassNotFoundException\n\nThrown when an application tries to load in a class through its string name using: The forName method in class Class. The findSystemClass method in class ClassLoader . The loadClass method in class ClassLoader.\nYou have to understand that the JVM can't realize the definition of the class you deleted can't be found, as the class itself can't be found which automatically throw the ClassNotFoundException.\nThis exception happen at runtime so it does not matter if it compiled first or not, you deleted the file, therefore it can't be found and throw the exception.\n\nNote that NoClassDefFoundError is not actually an exception, it is an Error derived from LinkageError while ClassNotFoundException derive directly from java.lang.Exception.\n\nTo resume, the NoClassDefFoundError globally simply mean that the JVM tried to access at runtime something that according to the compiled code should exists, but does not actually exist (or is not in the classpath)."
+  },
+  {
+    "id": 63,
+    "formulation": "How is virtual heap space divided in Java? (The answer may be version specific)",
+    "category": 6,
+    "answer": "The heap memory is the runtime data area from which the Java VM allocates memory for all class instances and arrays. The heap may be of a fixed or variable size. The garbage collector is an automatic memory management system that reclaims heap memory for objects.\n\nEden Space: The pool from which memory is initially allocated for most objects.\nSurvivor Space: The pool containing objects that have survived the garbage collection of the Eden space.\nTenured Generation or Old Gen: The pool containing objects that have existed for some time in the survivor space.\n\nNon-heap memory\nNon-heap memory includes a method area shared among all threads and memory required for the internal processing or optimization for the Java VM. It stores per-class structures such as a runtime constant pool, field and method data, and the code for methods and constructors. The method area is logically part of the heap but, depending on the implementation, a Java VM may not garbage collect or compact it. Like the heap memory, the method area may be of a fixed or variable size. The memory for the method area does not need to be contiguous.\n\nJava divides the heap into two spaces called generations, the New generation and the Old generation. The New generation is further divided into Eden and Survivor spaces.\n\nThe reason for having New and Old generations is because nearly all objects in a Java program live for only a short period of time, and if the short-lived objects can all be deallocated without examining all the long-lived objects, garbage collection will be much faster. For example, a program will usually have configuration settings and shared data objects that live for the entire life of the program, while objects like StringBuilders are constantly being created that become garbage before the methods that created them even return. Ideally all the temporary objects created after a few method calls could be instantly reclaimed without wasting time looking at anything else.\n\nHow does Java distinguish short-lived from long-lived objects? By putting them in different buckets and counting how many garbage collections they survive. Brand-new objects go into the Eden space. The Eden space is frequently garbage-collected, but nearly everything in there is already garbage by the time that it is examined. The few objects that are not garbage get moved into the Survivor space. Objects in the Survivor space get tagged with a count of how many garbage collections they survive. Some become unreachable and get garbage-collected relatively quickly, but others stay reachable, and after they've survived some threshold number of garbage collections, Java assumes they are long-lived objects and promotes them into the Old generation."
+  },
+  {
+    "id": 64,
+    "formulation": "What difference between float and BigDecimal? How they store the data?",
+    "category": 6,
+    "answer": "A BigDecimal is an exact way of representing numbers. A Double has a certain precision. Working with doubles of various magnitudes (say d1=1000.0 and d2=0.001) could result in the 0.001 being dropped alltogether when summing as the difference in magnitude is so large. With BigDecimal this would not happen.\n\nThe disadvantage of BigDecimal is that it's slower, and it's a bit more difficult to program algorithms that way (due to + - * and / not being overloaded).\n\nIf you are dealing with money, or precision is a must, use BigDecimal. Otherwise Doubles tend to be good enough. The unscaled value of the BigDecimal is stored in a BigInteger. The precision and scale are stored separately in integer fields:\n\nBigInteger intVal\nint scale\nint precision\nBigInteger stores the integer as a big-endian array of 32 bit integers, and the sign separately as another 32-bit integer.\n\nint signum\nint[] mag"
+  },
+  {
+    "id": 65,
+    "formulation": "Java object references",
+    "category": 6,
+    "answer": ""
+  },
+  {
+    "id": 66,
+    "formulation": "What is deep copy of a Java object",
+    "category": 6,
+    "answer": ""
+  },
+  {
+    "id": 67,
+    "formulation": "Disadvantages of setting heap size too high",
+    "category": 6,
+    "answer": ""
+  },
+  {
+    "id": 68,
+    "formulation": "What are utilities for JVM monitoring?",
+    "category": 6,
+    "answer": "A Java Profiler is a tool that monitors Java bytecode constructs and operations at the JVM level. Profilers track all method calls and memory usage, allowing you to dive into the call structure at whatever angle you choose.\n\nYour standard profiler will provide you with a lot of information, the usefulness of which depends mostly on the debugging task at hand. It should detail out all memory usage by the JVM including object creation, method executions, iterative executions (including recursive calls), thread executions, and garbage collection.\n\nThe IDE Defaults\nSince process monitoring is so important for efficient development and debugging of Java programs, all popular IDE vendors offer their own branded profiler either built-in or as a plugin you can download.\n\n1. Eclipse MAT\nThe Eclipse Memory Analyzer is a Java heap analyzer that can help you pinpoint memory leaks and reduce memory consumption. It can be used to analyze productive heap dumps to calculate the retained sizes of objects, see who is preventing the Garbage Collector from collecting objects, and run a report to automatically extract leak suspects.\n\n2. JetBrains JVM Debugger Memory View\nThe JVM Debugger Memory View plugin, compatible with both Intellij IDEA and Android Studio, extends the built-in JVM debugger with capabilities to explore objects in the JVM heap during a debug session. It shows you the total number of objects in the heap grouped by their class name.\n\nAlternative Java Process Monitoring Tools\nAs a programmer, you know that the default is not always the best choice. In fact, it usually isn't. So, it makes sense to check the alternatives to the profiler of your IDE to see which tool is the best for your needs, especially if it's free.\n\n4. VisualVM\nDubbing itself as an 'All-in-One Java Troubleshooting Tool', VisualVM is a visual tool integrating command-line JDK tools and lightweight profiling capabilities. It monitors and troubleshoots applications running on Java using various technologies including jvmstat, JMX, Serviceability Agent (SA) and Attach API.\n\n5. Oracle Java Mission Control\nJava Mission Control, along with Java Flight Recorder, allow for profiling and event collecting of low-level information about the behavior of the Java Virtual Machine (JVM) and the Java application. This set of tools, packaged with the Oracle JDK, also provide detailed analysis of the data collected."
+  },
+  {
+    "id": 69,
+    "formulation": "How to force GC be executed",
+    "category": 6,
+    "answer": "Your best option is to call System.gc() which simply is a hint to the garbage collector that you want it to do a collection. There is no way to force and immediate collection though as the garbage collector is non-deterministic."
+  },
+  {
+    "id": 70,
+    "formulation": "Garbage collection principles",
+    "category": 6,
+    "answer": "A Definition of Java Garbage Collection\nJava garbage collection is the process by which Java programs perform automatic memory management. Java programs compile to bytecode that can be run on a Java Virtual Machine, or JVM for short. When Java programs run on the JVM, objects are created on the heap, which is a portion of memory dedicated to the program. Eventually, some objects will no longer be needed. The garbage collector finds these unused objects and deletes them to free up memory.\n\nHow Java Garbage Collection Works\nJava garbage collection is an automatic process. The programmer does not need to explicitly mark objects to be deleted. The garbage collection implementation lives in the JVM. Each JVM can implement garbage collection however it pleases; the only requirement is that it meets the JVM specification. Although there are many JVMs, Oracle's HotSpot is by far the most common. It offers a robust and mature set of garbage collection options.\n\nWhile HotSpot has multiple garbage collectors that are optimized for various use cases, all its garbage collectors follow the same basic process. In the first step, unreferenced objects are identified and marked as ready for garbage collection. In the second step, marked objects are deleted. Optionally, memory can be compacted after the garbage collector deletes objects, so remaining objects are in a contiguous block at the start of the heap. The compaction process makes it easier to allocate memory to new objects sequentially after the block of memory allocated to existing objects.\n\nAll of HotSpot's garbage collectors implement a generational garbage collection strategy that categorizes objects by age. The rationale behind generational garbage collection is that most objects are short-lived and will be ready for garbage collection soon after creation.\n\nJava Garbage Collection Heaps\nImage via Wikipedia\n\nThe heap is divided into three sections:\n\nYoung Generation: Newly created objects start in the Young Generation. The Young Generation is further subdivided into an Eden space, where all new objects start, and two Survivor spaces, where objects are moved from Eden after surviving one garbage collection cycle. When objects are garbage collected from the Young Generation, it is a minor garbage collection event.\nOld Generation: Objects that are long-lived are eventually moved from the Young Generation to the Old Generation. When objects are garbage collected from the Old Generation, it is a major garbage collection event.\nPermanent Generation: Metadata such as classes and methods are stored in the Permanent Generation. Classes that are no longer in use may be garbage collected from the Permanent Generation.\nDuring a full garbage collection event, unused objects in all generations are garbage collected."
+  },
+  {
+    "id": 71,
+    "formulation": "What are memory leaks",
+    "category": 6,
+    "answer": ""
+  },
+  {
+    "id": 72,
+    "formulation": "Are memory leaks a problem in Java",
+    "category": 6,
+    "answer": ""
+  },
+  {
+    "id": 73,
+    "formulation": "What is variable shadowing",
+    "category": 6,
+    "answer": "Variable shadowing occurs when a variable declared within a certain scope (decision block, method, or inner class) has the same name as a variable declared in an outer scope. Then the variable in the scope that you are in shadows (hides/masks) the variable in the outer scope."
+  },
+  {
+    "id": 74,
+    "formulation": "How would you monitor JVM",
+    "category": 6,
+    "answer": ""
+  },
+  {
+    "id": 75,
+    "formulation": "How would you monitor how GC behaves during program execution",
+    "category": 6,
+    "answer": ""
+  },
+  {
+    "id": 76,
+    "formulation": "Name few GC implementations (Serial, Parallel, ParallelOld, ConcarentMarkAndSweep) describe major differences",
+    "category": 6,
+    "answer": "HotSpot has four garbage collectors:\n\nSerial: All garbage collection events are conducted serially in one thread. Compaction is executed after each garbage collection.\nParallel: Multiple threads are used for minor garbage collection. A single thread is used for major garbage collection and Old Generation compaction. Alternatively, the Parallel Old variant uses multiple threads for major garbage collection and Old Generation compaction.\nCMS (Concurrent Mark Sweep): Multiple threads are used for minor garbage collection using the same algorithm as Parallel. Major garbage collection is multi-threaded, like Parallel Old, but CMS runs concurrently alongside application processes to minimize 'stop the world' events (i.e. when the garbage collector running stops the application). No compaction is performed.\nG1 (Garbage First): The newest garbage collector is intended as a replacement for CMS. It is parallel and concurrent like CMS, but it works quite differently under the hood compared to the older garbage collectors."
+  },
+  {
+    "id": 77,
+    "formulation": "GCs, optimization techniques",
+    "category": 6,
+    "answer": "https://www.overops.com/blog/garbage-collectors-serial-vs-parallel-vs-cms-vs-the-g1-and-whats-new-in-java-8/,   https://www.overops.com/blog/improve-your-application-performance-with-garbage-collection-optimization"
+  },
+  {
+    "id": 78,
+    "formulation": "Memory model in JVM (happens before, atomicity of memory reads and writes)",
+    "category": 6,
+    "answer": ""
+  },
+  {
+    "id": 79,
+    "formulation": "Perm Space vs Metadata space in Java 8",
+    "category": 6,
+    "answer": "The main difference from a user perspective - which I think the previous answer does not stress enough - is that Metaspace by default auto increases its size (up to what the underlying OS provides), while PermGen always has a fixed maximum size. You can set a fixed maximum for Metaspace with JVM parameters, but you cannot make PermGen auto-increase.\n\nTo a large degree it is just a change of name. Back when PermGen was introduced, there was no Java EE or dynamic class(un)loading, so once a class was loaded it was stuck in memory until the JVM shut down - thus Permanent Generation. Nowadays classes may be loaded and unloaded during the lifespan of the JVM, so Metaspace makes more sense for the area where the metadata is kept.\n\nBoth of them contain the java.lang.Class instances and both of them suffer from ClassLoader leaks. Only difference is that with Metaspace default settings, it takes longer until you notice the symptoms (since it auto increases as much as it can), i.e. you just push the problem further away without solving it. OTOH I imagine the effect of running out of OS memory can be more severe than just running out of JVM PermGen, so I'm not sure it is much of an improvement.\n\nWhether you're using a JVM with PermGen or with Metaspace, if you are doing dynamic class unloading, you should to take measures against classloader leaks, for example by using  ClassLoader Leak Prevention library"
+  },
+  {
+    "id": 80,
+    "formulation": "What are G1 of C4 garbage collectors",
+    "category": 6,
+    "answer": "G1 (Garbage-First) is a fairly new garbage collector that is part of the Oracle HotSpot JVM. G1 first appeared in the later versions of JDK 6. It is enabled by specifying -XX:+UseG1GC on your Oracle JDK startup command line.\n\nLike C4, this mark-and-sweep collector offers an alternative approach to garbage collection in latency-sensitive applications. The G1 algorithm divides HotSpot's heap into fixed-size areas, onto which partial collection can be applied. It utilizes background threads to do heap marking concurrently with running application threads, which is similar to other concurrent marking algorithms.\n\nG1's incremental approach results in shorter but more frequent pauses, which for some applications is enough to avoid long stop-the-world pauses. The older algorithm, Concurrent Continuously Compacting Collector (C4) algorithm takes an interesting and unique approach to low latency generational garbage collection. C4 is different from most generational garbage collectors because it is built on the assumptions that garbage is good -- meaning that applications generating garbage are doing good work -- and that compaction is inevitable. C4 is designed to satisfy varying and dynamic memory requirements, making it especially well-suited for long-running server-side applications."
+  },
+  {
+    "id": 82,
+    "formulation": "What is a parameterized or generic type",
+    "category": 7,
+    "answer": "A generic type is a type with formal type parameters. A parameterized type is an instantiation of a generic type with actual type arguments.\nA generic type is a reference type that has one or more type parameters. These type parameters are later replaced by type arguments when the generic type is instantiated (or declared ). \nExample (of a generic type): \n\ninterface Collection<E>  { \n  public void add (E x); \n  public Iterator<E> iterator();\n}"
+  },
+  {
+    "id": 83,
+    "formulation": "Why do instantiations of a generic type share the same runtime type?",
+    "category": 7,
+    "answer": "Because of type erasure.\nThe compiler translates generic and parameterized types by a technique called type erasure .  Basically, it elides all information related to type parameters and type arguments. For instance, the parameterized type List<String> is translated to type List , which is the so-called raw type .  The same happens for the parameterized type List<Long> ; it also appears as List in the bytecode."
+  },
+  {
+    "id": 84,
+    "formulation": "Can I cast to a parameterized type?",
+    "category": 7,
+    "answer": "Yes, you can, but under certain circumstances it is not type-safe and the compiler issues an \"unchecked\" warning.\nAll instantiations of a generic type share the same runtime type representation, namely the representation of the raw type. For instance, the instantiations of a generic type List ,  such as List<Date> , List<String> , List<Long> , etc. have different static types at compile time, but the same dynamic type List at runtime."
+  },
+  {
+    "id": 85,
+    "formulation": "What is a wildcard parameterized type?",
+    "category": 7,
+    "answer": "An instantiation of a generic type where the type argument is a wildcard (as opposed to a concrete type).\nA wildcard parameterized type is an instantiation of a generic type where at least one type argument is a wildcard.  Examples of wildcard parameterized types are Collection<?> , List<? extends Number> , Comparator<? super String> and Pair<String,?> ."
+  },
+  {
+    "id": 86,
+    "formulation": "What is Autoboxing and what are its advantages/pitfalls",
+    "category": 7,
+    "answer": "Autoboxing is the automatic conversion that the Java compiler makes between the primitive types and their corresponding object wrapper classes. For example, converting an int to an Integer, a double to a Double, and so on. If the conversion goes the other way, this is called unboxing."
+  },
+  {
+    "id": 87,
+    "formulation": "Can we use parameterized types in exception handling",
+    "category": 7,
+    "answer": "No.  Exception and error types must not be generic.\nIt is illegal to define generic type that are directly or indirectly derived from class Throwable . Consequently, no parameterized types appear anywhere in exception handling."
+  },
+  {
+    "id": 88,
+    "formulation": "What are Annotations and which predefined by the language specification does one know (@Deprecated, @Override, @SuppressWarnings)",
+    "category": 7,
+    "answer": ""
+  },
+  {
+    "id": 89,
+    "formulation": "Problems Enum type solves (comparing to \"public static int\" enum pattern)",
+    "category": 7,
+    "answer": "You should always use enums when a variable (especially a method parameter) can only take one out of a small set of possible values. Examples would be things like type constants (contract status: \"permanent\", \"temp\", \"apprentice\"), or flags (\"execute now\", \"defer execution\").\n\nIf you use enums instead of integers (or String codes), you increase compile-time checking and avoid errors from passing in invalid constants, and you document which values are legal to use.\n\nBTW, overuse of enums might mean that your methods do too much (it's often better to have several separate methods, rather than one method that takes several flags which modify what it does), but if you have to use flags or type codes, enums are the way to go."
+  },
+  {
+    "id": 90,
+    "formulation": "Can we add something to List<?>",
+    "category": 7,
+    "answer": "this is just a list of Objects"
+  },
+  {
+    "id": 91,
+    "formulation": "What is method reference (Java 8)",
+    "category": 7,
+    "answer": "Method references are a special type of lambda expressions. They're often used to create simple lambda expressions by referencing existing methods. There are four kinds of method references:\n\nStatic methods (StringUtils::capitalize)\nInstance methods of particular objects (bikeFrameSizeComparator::compare)\nInstance methods of an arbitrary object of a particular type\nConstructor (Bicycle::new)"
+  },
+  {
+    "id": 92,
+    "formulation": "What is default method (Java 8)",
+    "category": 7,
+    "answer": ""
+  },
+  {
+    "id": 93,
+    "formulation": "What is stream API (java 8)",
+    "category": 7,
+    "answer": "Stream API is used to process collections of objects. A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result.\nThe features of Java stream are:\n\n1) A stream is not a data structure instead it takes input from the Collections, Arrays or I/O channels.\n2) Streams don't change the original data structure, they only provide the result as per the pipelined methods.\n3) Each intermediate operation is lazily executed and returns a stream as a result, hence various intermediate operations can be pipelined. Terminal operations mark the end of the stream and return the result."
+  },
+  {
+    "id": 94,
+    "formulation": "What is Lambda expression (Java 8)",
+    "category": 7,
+    "answer": "Lambda expressions basically express instances of functional interfaces (An interface with single abstract method is called functional interface. An example is java.lang.Runnable). lambda expressions implement the only abstract function and therefore implement functional interfaces\nLambda expressions are added in Java 8 and provide below functionalities.\n1) Enable to treat functionality as a method argument, or code as data.\n2) A function that can be created without belonging to any class.\n3) A lambda expression can be passed around as if it was an object and executed on demand."
+  },
+  {
+    "id": 95,
+    "formulation": "How to create your own annotation with a specific retention policy (e.g. Runtime) behavior",
+    "category": 7,
+    "answer": "Java annotations are a mechanism for adding metadata information to our source code. They are a powerful part of Java, and were added in JDK5. \nThe first step toward creating a custom annotation is to declare it using the @interface keyword:\n\npublic @interface JsonSerializable {\n}\nThe next step is to add meta-annotations to specify the scope and the target of our custom annotation:\n\n@Retention(RetentionPolicy.RUNTIME)\n@Target(ElementType.Type)\npublic @interface JsonSerializable {\n}\nAs we can see, our first annotation has runtime visibility, and we can apply it to types (classes). Moreover, it has no methods, and thus serves as a simple marker to mark classes that can be serialized into JSON"
+  },
+  {
+    "id": 96,
+    "formulation": "What happens with lambda after compile time?",
+    "category": 7,
+    "answer": "The VM decides how to implement lambda, not a compiler.\n\nInstead of generating bytecode to create the object that implements the lambda expression (such as calling a constructor for an inner class), we describe a recipe for constructing the lambda, and delegate the actual construction to the language runtime. That recipe is encoded in the static and dynamic argument lists of an invokedynamic instruction.\n javac translates a lambda expression into a rather abstract instruction, which doesn't dictate how it is created at runtime. It is the JVM that decides what to do. In the worst case, a lambda expression = new an anonymous class. In the best case, a lambda expression = a globally cached object."
+  },
+  {
+    "id": 97,
+    "formulation": "What is retention type?",
+    "category": 7,
+    "answer": "A retention policy determines at what point annotation should be discarded.\nJava defined 3 types of retention policies through java.lang.annotation.RetentionPolicy enumeration. It has SOURCE, CLASS and RUNTIME.\nRetentionPolicy.SOURCE: Discard during the compile. These annotations don't make any sense after the compile has completed, so they aren't written to the bytecode.\nExample: @Override, @SuppressWarnings\nRetentionPolicy.CLASS: Discard during class load. Useful when doing bytecode-level post-processing. Somewhat surprisingly, this is the default.\nRetentionPolicy.RUNTIME: Do not discard. The annotation should be available for reflection at runtime. Example: @Deprecated\nThe retention policy will be specified by using java built-in annotation @Retention, and we have to pass the retention policy type.\nThe default retention policy type is CLASS."
+  },
+  {
+    "id": 98,
+    "formulation": "What are the new features of Java 11?",
+    "category": 7,
+    "answer": "Running Java File with single command\nNew utility methods in String class\nLocal-Variable Syntax for Lambda Parameters (the only language feature release)\nNested Based Access Control\nJEP 321: HTTP Client\nReading/Writing Strings to and from the Files\nJEP 328: Flight Recorder"
+  },
+  {
+    "id": 100,
+    "formulation": "Thread vs Runnable, run() vs start()",
+    "category": 8,
+    "answer": "The difference is that when program calls start() method, a new thread is created and code inside run() is executed in the new thread: while if you call run() method directly, no new thread will be created and code inside run() will execute in the current thread directly.\n\nAnother difference between start() and run() in Java thread is that you cannot call start() twice. Once started, second start() call will throw IllegalStateException in Java while you can call run() method several times since it's just an ordinary method."
+  },
+  {
+    "id": 101,
+    "formulation": "Synchronization of java blocks and methods",
+    "category": 8,
+    "answer": ""
+  },
+  {
+    "id": 102,
+    "formulation": "Explain usage of the couple wait()/notify()",
+    "category": 8,
+    "answer": "1) Though wait, notify and notifyAll are related to threads they are not defined in java.lang.Thread class, instead they are defined in the Object class. If you are wondering why? then you should read why the wait() and notify() are defined in Object class in Java.\n\n2) You must call the wait(), notify() and notifyAll() methods from a synchronized context in Java i.e. inside synchronized method or a synchronized block. The thread must hold the lock on the object it is going to call the wait() or notify() method and that is acquired when it enter into a synchronized context.\n\n3) You must call wait() method from inside a loop, don't call with an if block because a thread can sporadically awake from the wait state without being notified by another party. If you use if block then this could result in a bug. You can also see Item 69 of Effective Java for more details.\n\nHere is the standard idiom to call the wait() method in Java:\n\nsynchronized (theSharedObject) {\n  while (condition) {\n   theSharedObject.wait(); \n  }\n // do something\n}\n\n4) When a thread calls the wait() method in Java, it goes to the wait state by releasing the lock, which is later acquired by the other thread who can notify this thread. \n\n5) A thread waiting due to a call to wait() method can wake up either by notification e.g. calling notify() or notifyAll() method on the same object or due to interruption.\n\n6) The wait() method throws InterrruptedException in Java, which is a checked exception. You must provide a handler for this, but it's your choice whether you really want to handle the interruption or not.\n\n7) You must call wait() method on shared object e.g. in producer-consumer problem, the task queue is shared between producer and the consumer thread. In order to communicate, you must use that queue on synchronized block and subsequently called wait() method on queue e.g. queue.wait().\n\nThe other thread should also call the notify() or notifyAll() method on same shared object i.e. queue.notify() or queue.notifyAll(). You can also see my post how to do inter thread communication in Java using wait notify\n\n8) When you call the notify() method on a shared object and if more than one thread is waiting on that lock then anyone of them will get the notification, which thread will get the notification is not guaranteed. If only one thread is waiting then it will get the notification.\n\n9) When you call the notifyAll() method on shared object and if more than one thread is waiting for notification then all of them will receive the notification but who will get the CPU to start execution is not guaranteed. It depends on upon thread scheduler. Which means it's possible for a thread to get the notification, but it might go to the wait state again if the condition for wait still holds true, mainly due to other thread's processing.\n\nFor example, suppose 5 people are waiting for food and they all hear the notification that food has arrived, but only of them goes past the door and eat food. When next people's chance come to go past the door food is already finished so it goes to the wait state again. \n\n10) Main difference between notify() and notifyAll() is that in case of notify() only one of the waiting thread gets a notification but in case of notifyAll() all thread get notification. You can also read the real difference between notify() and notifyAll() to learn more\n\nRead more: https://www.java67.com/2016/04/10-points-about-wait-notify-and-notifyAll-in-java-multithreading.html#ixzz6gmYggTM8"
+  },
+  {
+    "id": 103,
+    "formulation": "Difference between sleep and wait",
+    "category": 8,
+    "answer": "A wait can be \"woken up\" by another thread calling notify on the monitor which is being waited on whereas a sleep cannot. Also a wait (and notify) must happen in a block synchronized on the monitor object whereas sleep does not"
+  },
+  {
+    "id": 104,
+    "formulation": "Atomic operations",
+    "category": 8,
+    "answer": ""
+  },
+  {
+    "id": 105,
+    "formulation": "Deadlock/Livelock definition plus example",
+    "category": 8,
+    "answer": "In concurrent computing, a deadlock is a state in which each member of a group of actions, is waiting for some other member to release a lock\n\nA livelock is similar to a deadlock, except that the states of the processes involved in the livelock constantly change with regard to one another, none progressing. Livelock is a special case of resource starvation; the general definition only states that a specific process is not progressing.\n\nA real-world example of livelock occurs when two people meet in a narrow corridor, and each tries to be polite by moving aside to let the other pass, but they end up swaying from side to side without making any progress because they both repeatedly move the same way at the same time.\n\nLivelock is a risk with some algorithms that detect and recover from deadlock. If more than one process takes action, the deadlock detection algorithm can be repeatedly triggered. This can be avoided by ensuring that only one process (chosen randomly or by priority) takes action."
+  },
+  {
+    "id": 106,
+    "formulation": "Executors framework",
+    "category": 8,
+    "answer": ""
+  },
+  {
+    "id": 107,
+    "formulation": "What does it mean Volatile keyword",
+    "category": 8,
+    "answer": "Volatile keyword is used to modify the value of a variable by different threads. It is also used to make classes thread safe. It means that multiple threads can use a method and instance of the classes at the same time without any problem. The volatile keyword can be used either with primitive type or objects.\n\nThe volatile keyword does not cache the value of the variable and always read the variable from the main memory. The volatile keyword cannot be used with classes or methods. However, it is used with variables. It also guarantees visibility and ordering. It prevents the compiler from the reordering of code."
+  },
+  {
+    "id": 108,
+    "formulation": "java.util.concurrent.*, what utils do you know",
+    "category": 8,
+    "answer": "The java.util.concurrent contains many features (https://www.baeldung.com/java-util-concurrent), the most useful utilities from this package like:\n\nExecutor (Executor is an interface that represents an object that executes provided tasks)\nExecutorService (ExecutorService is a complete solution for asynchronous processing. It manages an in-memory queue and schedules submitted tasks based on thread availability. To use ExecutorService, we need to create one Runnable class.)\nScheduledExecutorService (ScheduledExecutorService is a similar interface to ExecutorService, but it can perform tasks periodically. Executor and ExecutorService's methods are scheduled on the spot without introducing any artificial delay. Zero or any negative value signifies that the request needs to be executed instantly. We can use both Runnable and Callable interface to define the task.)\nFuture (Future is used to represent the result of an asynchronous operation. It comes with methods for checking if the asynchronous operation is completed or not, getting the computed result, etc.)\nCountDownLatch (CountDownLatch (introduced in JDK 5) is a utility class which blocks a set of threads until some operation completes.)\nCyclicBarrier (CyclicBarrier works almost the same as CountDownLatch except that we can reuse it. Unlike CountDownLatch, it allows multiple threads to wait for each other using await() method(known as barrier condition) before invoking the final task.)\nSemaphore (The Semaphore is used for blocking thread level access to some part of the physical or logical resource. A semaphore contains a set of permits; whenever a thread tries to enter the critical section, it needs to check the semaphore if a permit is available or not.)\nThreadFactory (ThreadFactory acts as a thread (non-existing) pool which creates a new thread on demand. It eliminates the need of a lot of boilerplate coding for implementing efficient thread creation mechanisms.)\nBlockingQueue (In asynchronous programming, one of the most common integration patterns is the producer-consumer pattern. The java.util.concurrent package comes with a data-structure know as BlockingQueue - which can be very useful in these async scenarios.)\nDelayQueue (DelayQueue is an infinite-size blocking queue of elements where an element can only be pulled if it's expiration time (known as user defined delay) is completed. Hence, the topmost element (head) will have the most amount delay and it will be polled last.)\nLocks (Lock is a utility for blocking other threads from accessing a certain segment of code, apart from the thread that's executing it currently. The main difference between a Lock and a Synchronized block is that synchronized block is fully contained in a method; however, we can have Lock API's lock() and unlock() operation in separate methods.)\nPhaser (Phaser is a more flexible solution than CyclicBarrier and CountDownLatch - used to act as a reusable barrier on which the dynamic number of threads need to wait before continuing execution. We can coordinate multiple phases of execution, reusing a Phaser instance for each program phase.)"
+  },
+  {
+    "id": 109,
+    "formulation": "Thread local, what for are they needed",
+    "category": 8,
+    "answer": "The ThreadLocal class in Java enables you to create variables that can only be read and written by the same thread. Thus, even if two threads are executing the same code, and the code has a reference to a ThreadLocal variable, then the two threads cannot see each other's ThreadLocal variables.  It's usage is to define a global variable in which the value referenced can be unique in each thread. It's usages typically entails storing some sort of contextual information that is linked to the current thread of execution."
+  },
+  {
+    "id": 110,
+    "formulation": "Does child thread see the value of parent thread local",
+    "category": 8,
+    "answer": "Using InheritableThreadLocal means the value is copied to any child threads. Note that in either case, you can't change the value of the parent's ThreadLocal variable, but you can mutate the object the variable refers to. Note also, that parent thread, ThreadLocal variable by default is not available to child thread. How to use InheritableThreadLocal:\nConstructor :\nInheritableThreadLocal gfg_tl = new InheritableThreadLocal();\nIt is the child class of ThreadLocal and hence all methods present in ThreadLocal by default available to InheritableThreadLocal.\nIt contains only one method (must be overriden):\nSyntax :\npublic Object childValue(Object parentValue)"
+  },
+  {
+    "id": 111,
+    "formulation": "Starvation/Race condition definition plus example",
+    "category": 8,
+    "answer": "Starvation is a problem which is closely related to both, Livelock and Deadlock. In a dynamic system, requests for resources keep on happening. Thereby, some policy is needed to make a decision about who gets the resource when. This process, being reasonable, may lead to a some processes never getting serviced even though they are not deadlocked."
+  },
+  {
+    "id": 112,
+    "formulation": "Execution order",
+    "category": 8,
+    "answer": "Here are the important rules:\nwhen the class is created, the constructor of the super class has to be called first. This bubbles up to Object class\nbefore the constructor is called, member variable initialization is called."
+  },
+  {
+    "id": 113,
+    "formulation": "Lock-free operations, how to create lock-free implementation of field reassignment",
+    "category": 8,
+    "answer": ""
+  },
+  {
+    "id": 114,
+    "formulation": "ExecutorService submit vs execute",
+    "category": 8,
+    "answer": "submit() returns a Future, whereas execute() doesn't return anything. It appears both are asynchronous, but with submit() you can call future.get() on the returned Future in order to block until the submitted task actually completes. Also, if that task has a result value that you want to get, you can use submit() with a Callable instead of a Runnable and the future.get() call will give you that result."
+  },
+  {
+    "id": 115,
+    "formulation": "How to publish object",
+    "category": 8,
+    "answer": ""
+  },
+  {
+    "id": 116,
+    "formulation": "RecursiveTask vs RecursiveAction",
+    "category": 8,
+    "answer": "From the first lines of their respective Javadocs:\n\n[RecursiveTask is] A recursive result-bearing ForkJoinTask.\n[RecursiveAction is] A recursive resultless ForkJoinTask.\nAlthough technically, RecursiveAction does return a value, it's just always null, because it's a ForkJoinTask<Void>, and that's the only possible value of Void."
+  },
+  {
+    "id": 117,
+    "formulation": "Atomicity of long and double assignment operations",
+    "category": 8,
+    "answer": ""
+  },
+  {
+    "id": 118,
+    "formulation": "What is Fork-Join",
+    "category": 8,
+    "answer": "The fork/join framework was presented in Java 7. It provides tools to help speed up parallel processing by attempting to use all available processor cores - which is accomplished through a divide and conquer approach. In practice, this means that the framework first 'forks', recursively breaking the task into smaller independent subtasks until they are simple enough to be executed asynchronously. After that, the 'join' part begins, in which results of all subtasks are recursively joined into a single result, or in the case of a task which returns void, the program simply waits until every subtask is executed. \nThe ForkJoinPool is the heart of the framework. It is an implementation of the ExecutorService that manages worker threads and provides us with tools to get information about the thread pool state and performance.\nWorker threads can execute only one task at a time, but the ForkJoinPool doesn't create a separate thread for every single subtask. Instead, each thread in the pool has its own double-ended queue (or deque, pronounced deck) which stores tasks."
+  },
+  {
+    "id": 120,
+    "formulation": "Inheritance vs Composition",
+    "category": 9,
+    "answer": "Inheritance is an \"is-a\" relationship. Composition is a \"has-a\". You do composition by having an instance of another class C as a field of your class, instead of extending C.  \nInheritance is about a relation between classes (is about generalisation and specialisation)\nComposition is a about relations between objects of classes (is about association of objects of very different classes)"
+  },
+  {
+    "id": 121,
+    "formulation": "Coupling & Cohesion",
+    "category": 9,
+    "answer": "Cohesion refers to what the class (or module) can do. Low cohesion would mean that the class does a great variety of actions - it is broad, unfocused on what it should do. High cohesion means that the class is focused on what it should be doing, i.e. only methods relating to the intention of the class.\nAs for coupling, it refers to how related or dependent two classes/modules are toward each other. For low coupled classes, changing something major in one class should not affect the other. High coupling would make it difficult to change and maintain your code; since classes are closely knit together, making a change could require an entire system revamp.\nGood software design has high cohesion and low coupling."
+  },
+  {
+    "id": 122,
+    "formulation": "Name OOD principles that you know",
+    "category": 9,
+    "answer": "Single Responsibility Principle\nOpen Closed Principle\nLiskov Substitution Principle\nInterface Segregation Principle\nDependency Inversion Principle"
+  },
+  {
+    "id": 123,
+    "formulation": "Do you know SOLID principles (describe one of them)",
+    "category": 9,
+    "answer": ""
+  },
+  {
+    "id": 125,
+    "formulation": "Give an insight into such patterns as Fasade/Proxy/Decorator/Strategy/Observer (selectively)",
+    "category": 10,
+    "answer": ""
+  },
+  {
+    "id": 126,
+    "formulation": "Which patterns do you use in a daily basis. Explain their principles.",
+    "category": 10,
+    "answer": ""
+  },
+  {
+    "id": 127,
+    "formulation": "What major patterns do the Java APIs utilize? Where exactly?",
+    "category": 10,
+    "answer": ""
+  },
+  {
+    "id": 128,
+    "formulation": "Can you please explain 'bridge', 'adapter' design pattern?",
+    "category": 10,
+    "answer": ""
+  },
+  {
+    "id": 129,
+    "formulation": "Can you please explain \"FlyWeight\" design pattern?",
+    "category": 10,
+    "answer": ""
+  },
+  {
+    "id": 130,
+    "formulation": "Describe difference between abstract factory and builder",
+    "category": 10,
+    "answer": ""
+  },
+  {
+    "id": 131,
+    "formulation": "Describe difference between adapter and decorator",
+    "category": 10,
+    "answer": ""
+  },
+  {
+    "id": 132,
+    "formulation": "Can you please explain \"Builder\" design pattern?",
+    "category": 10,
+    "answer": ""
+  },
+  {
+    "id": 133,
+    "formulation": "Enterprise Integration Patterns",
+    "category": 10,
+    "answer": ""
+  },
+  {
+    "id": 134,
+    "formulation": "Architectural Patterns",
+    "category": 10,
+    "answer": ""
+  },
+  {
+    "id": 136,
+    "formulation": "How do you identify good code? (Based on book \"Clean code\" by R. C. Martin)",
+    "category": 11,
+    "answer": "Good code is well-organized. Data and operations in classes fit together. There aren't extraneous dependencies between classes. It does not look like \"spaghetti.\"\nGood code comments explain why things are done not what is done. The code itself explains what is done. The need for comments should be minimal.\nGood code uses meaningful naming conventions for all but the most transient of objects. the name of something is informative about when and how to use the object.\nGood code is well-tested. Tests serve as an executable specification of the code and examples of its use.\nGood code is not \"clever\". It does things in straightforward, obvious ways.\nGood code is developed in small, easy to read units of computation. These units are reused throughout the code."
+  },
+  {
+    "id": 137,
+    "formulation": "Average lines per method & class",
+    "category": 11,
+    "answer": ""
+  },
+  {
+    "id": 138,
+    "formulation": "Is it a problem to have comments in code",
+    "category": 11,
+    "answer": "Comments do have problems - you need to keep them updated as you update the code they refer to, which happens far too infrequently. A wiki or something is a more appropriate resource for thorough documentation about your code. Your code should be readable without requiring comments. Version control or revision notes should be where you describe code changes you made.\n\nNone of the above invalidates the use of comments, however. We don't live in an ideal world so when any of the above fail for whatever reason, I'd rather have some comments to fall back."
+  },
+  {
+    "id": 139,
+    "formulation": "how package structure can be packed into java project? (package per feature, package per layer?)",
+    "category": 11,
+    "answer": "proandroiddev.com/package-by-type-by-layer-by-feature-vs-package-by-layered-feature-e59921a4dffa \nPackage by type\nWe put all the classes of the same type in a folder named after the type. I've seen (and been involved with) projects where all the interfaces, because they are interfaces, are put together in an interfaces package. Then all the exceptions no matter where they are used, are in , you guessed it, exceptions package.\nPackage by layer\nAfter we've worked on a 'package by type' project one too many times, we know better this time. We've read this or that example or a big company's documentation and we've paid notice to sample projects. In the meantime we've also learned not to put 'I' in front of interface names, to create Database or Network operation classes, and use more abstractions.\nSo the next step is to start thinking about architectural layers. We have the UI layer, the Network layer, the Database layer and the dreaded Model layer. The class organization patterns, sometimes erroneously referred to as architectures, such as MVC, MVP and their siblings, often go this way. \nPackage by feature (a popular attempt)\nNow, we've read a couple of books on architecture, we've read about Domain-Driven Design, we are familiar with the Clean Code family of architectures (Clean Architecture, VIPER, Hexagonal, Ports and Adapters etc) and we have learned how to\nmodel the domain of the application,\ndecouple high-level policies from low-level concrete implementations,\nprotect the domain entities from the implementation environment,\ninvert dependencies by coding to abstractions, using repositories, decorators, facades, factories etc\nuse the Open Closed principle, Interface segregation principle, Liskov Substitution principle etc"
+  },
+  {
+    "id": 141,
+    "formulation": "Do you have experience in TDD. What are TDD steps (test, code, REFACTOR)",
+    "category": 12,
+    "answer": "There are 5 steps in the TDD flow:\n\n1) Write a test case: Based on the requirements, write an automated test case.\n2) Run all the test cases: Run these automated test cases on the currently developed code.\n3) Develop the code for that test cases: If the test case fails, then, write the code to make that test-case work as expected.\n4) Run test cases again: Run the test cases again and check if all the test cases developed so far are implemented.\n5) Refactor your code: This is an optional step. However, it's important to refactor your code to make it more readable and reusable.\n6) Repeat the steps 1- 5 for new test cases: Repeat the cycle for the other test cases until all the test cases are implemented."
+  },
+  {
+    "id": 142,
+    "formulation": "Your experience with different unit testing libraries (Junit, TestNG, Spock, etc.)",
+    "category": 12,
+    "answer": ""
+  },
+  {
+    "id": 143,
+    "formulation": "What is mocking? Have you used any mocking frameworks?",
+    "category": 12,
+    "answer": ""
+  },
+  {
+    "id": 144,
+    "formulation": "Describe sime advanced Junit featrues (@DataPoint, @Theory, @Rule, @RunWith, @Category, @Parameters)",
+    "category": 12,
+    "answer": "Parameterized Tests\nFor Parameterized tests use @Parameters and @RunWith(Parameterized.class)\nhttps://github.com/junit-team/junit/wiki/Parameterized-tests\nCategory\n@Category\nGrouping tests into categories. e.g. Fast, Slow etc.\nhttps://github.com/junit-team/junit/wiki/Categories\n@IncludeCategory\nRuns only the classes and methods that are annotated with either the category given with the @IncludeCategory annotation, or a subtype of that category.\n@ExcludeCategory\nInverse of @IncludeCategory\nRules\n@Rule\nRules allow very flexible addition or redefinition of the behavior of each test method in a test class. e.g. Creating a Temp Folder rule for creating a temp folder while running tests.\nhttps://github.com/junit-team/junit/wiki/Rules\nTheory and related annotations\n@Theory\nTheories give more flexible and expressive assertions, consumes DataPoint(s)\nhttps://github.com/junit-team/junit/wiki/Theories\n@DataPoint\nAnnotating an field or method with @DataPoint will cause the field value or the value returned by the method to be used as a potential parameter for Theories in that class\n@DataPoints\nExtension of @Datapoint\nAnnotating an array or iterable-typed field or method with @DataPoints will cause the values in the array or iterable given to be used as potential parameters for Theories in that class"
+  },
+  {
+    "id": 145,
+    "formulation": "What libraries that help to write unit tests have you used (Hamcrest, AssertJ, JUnitParams, XmlUnit, etc.)",
+    "category": 12,
+    "answer": ""
+  },
+  {
+    "id": 146,
+    "formulation": "Describe different types of automated testing and your experience with them",
+    "category": 12,
+    "answer": "1. Unit Testing\nIn unit testing, the individual components/units of a web application are tested. In general, unit tests are written by developers, but automation testers can also write them. Unit testing of a web app is performed during the development phase. It is also considered as the first level of web app testing.\n2. Smoke Testing\nSmoke testing is performed to examine whether the deployed build is stable or not. In short, verifying the working process of essential features so that testers can proceed with further testing.\n3. Functional Testing\nFunctional testing is performed to analyze whether all the functions of your web app works as expected or not. The sections covered in functional testing involves user interface, APIs, database, security, client/server applications, and overall functionality of your website.\n4. Integration Testing\nIn integration testing, the application modules are integrated logically and then tested as a group. It focuses on verifying the data communication between different modules of your web app.\n5. Regression Testing\nRegression testing is performed to verify that a recent change in code doesn't affect the existing features of your web app. In simple terms, it verifies that the old code works in the same way as they were before making new changes."
+  },
+  {
+    "id": 147,
+    "formulation": "Do you know BDD, how it differs from TDD",
+    "category": 12,
+    "answer": "BDD stands for Behavior Driven Development. BDD is an extension to TDD where instead of writing the test cases, we start by writing a behavior. Later, we develop the code which is required for our application to perform the behavior. The scenario defined in the BDD approach makes it easy for the developers, testers and business users to collaborate. BDD is considered a best practice when it comes to automated testing as it focuses on the behavior of the application and not on thinking about the implementation of the code. The behavior of the application is the center of focus in BDD and it forces the developers and testers to walk-in the customer's shoes.\n\nProcess Of BDD\n1) Write the behavior of the application: The behavior of an application is written in simple English like language by the product owner or the business analysts or QAs.\n2) Write the automated scripts: This simple English like language is then converted into programming tests.\n3) Implement the functional code: The functional code underlying the behavior is then implemented.\n4) Check if the behavior is successful: Run the behavior and see if it is successful. If successful, move to the next behavior otherwise fix the errors in the functional code to achieve the application behavior.\n5) Refactor or organize code: Refactor or organize your code to make it more readable and re-usable.\n6) Repeat the steps 1-5 for new behavior: Repeat the steps to implement more behaviors in your application.\n\nIn TDD (Test Driven Development), the test is written to check the implementation of functionality, but as the code evolves, tests can give false results. BDD (Behavior Driven Development) is also a test-first approach, but differs by testing the actual behavior of the system from the end users perspective. \nIn both TDD and BDD approaches, tests are written upfront before the actual code is written. Writing tests first helps predict the course of the development, which will ultimately prevent any cases being missed from the code or functionality. Prevention of bugs will be the main aim of these approaches, and these tests will also act as concrete documentation of what is planned to be achieved in terms of test coverage."
+  },
+  {
+    "id": 149,
+    "formulation": "Basic idea of IoC pattern. Benefits.",
+    "category": 13,
+    "answer": "advantages of using the IoC principle:\ndecouples the task implementation from its execution\nmodules are pluggable and can be easily replaced with their equivalent\neases out the modular testing\n1) Decoupling components and layers in the system\n2) Alleviates a component from being responsible for managing it's dependencies\n3) Swap dependency implementations in different environments.\n4) Allows a component be tested through mocking of dependencies.\n5) Provides a mechanism for sharing resources throughout an application.\nBenefits\nMakes it easier to test your code. Without it, the code you are testing is hard to isolate as it will be highly coupled to the rest of the system.\nUseful when developing modular systems. You can replace components without requiring recompilation.\nMost important, is making it easy to follow the Single Responsibility Principle.\n\nDI/IoC makes it simple to manage dependencies between objects. In turn, that makes it easier for me to break coherent functionality off into it's own contract (interface). As a result, the code has been far more modularized since I learned of DI/IoC.\nAnother result of this is that one can much more easily see the way through to a design that supports the Open-Closed Principle."
+  },
+  {
+    "id": 150,
+    "formulation": "What is Spring configuration file? How does it look like?",
+    "category": 13,
+    "answer": ""
+  },
+  {
+    "id": 151,
+    "formulation": "Out of the box bean scopes (singleton, prototype, request, session, global session)",
+    "category": 13,
+    "answer": ""
+  },
+  {
+    "id": 152,
+    "formulation": "What are the main bean scopes in web container",
+    "category": 13,
+    "answer": ""
+  },
+  {
+    "id": 153,
+    "formulation": "What are the types of Dependency Injection Spring supports",
+    "category": 13,
+    "answer": "Constructor Injection - enforcing immutability\nThis is the most straightforward and recommended way of dependency injection. A dependent class has a constructor, where all dependencies are set, they will be provided by Spring container according to XML, Java or annotation based configurations.\nSetter injection - enjoy the mutability (@Autowired on setter methods)\nField injectiones (@Autowired on fields)\nAdvantages:\nEasy to use, no constructors or setters required\nCan be easily combined with the constructor and/or setter approach\nDisadvantages:\nLess control over object instantiation. In order to instantiate the object of a class for a test, you will need either a Spring container configured or mock library - depends on the test you are writing.\nA number of dependencies can reach dozens until you notice that something went wrong in your design.\nNo immutability - the same as for setter injection"
+  },
+  {
+    "id": 154,
+    "formulation": "Autowiring. Types of autowiring.",
+    "category": 13,
+    "answer": "1) autowire byName - For this type of autowiring, setter method is used for dependency injection. Also the variable name should be same in the class where we will inject the dependency and in the spring bean configuration file.\n2) autowire byType - For this type of autowiring, class type is used. So there should be only one bean configured for this type in the spring bean configuration file.\n3) autowire by constructor - This is almost similar to autowire byType, the only difference is that constructor is used to inject the dependency.\n4) autowire by autodetect - If you are on Spring 3.0 or older versions, this is one of the autowire options available. This option was used for autowire by constructor or byType, as determined by Spring container. Since we already have so many options, this option is deprecated. I will not cover this option in this tutorial.\n@Autowired annotation - We can use Spring @Autowired annotation for spring bean autowiring. @Autowired annotation can be applied on variables and methods for autowiring byType. We can also use @Autowired annotation on constructor for constructor based spring autowiring.\nFor @Autowired annotation to work, we also need to enable annotation based configuration in spring bean configuration file. This can be done by context:annotation-config element or by defining a bean of type org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.\n@Qualifier annotation - This annotation is used to avoid conflicts in bean mapping and we need to provide the bean name that will be used for autowiring. This way we can avoid issues where multiple beans are defined for same type. This annotation usually works with the @Autowired annotation. For constructors with multiple arguments, we can use this annotation with the argument names in the method."
+  },
+  {
+    "id": 155,
+    "formulation": "What are inner beans.",
+    "category": 13,
+    "answer": ""
+  },
+  {
+    "id": 156,
+    "formulation": "What modules does Spring Framework have",
+    "category": 13,
+    "answer": ""
+  },
+  {
+    "id": 157,
+    "formulation": "Describe Test support in Spring (AbstractTransactionalSpringTests)",
+    "category": 13,
+    "answer": "What type of tests typically use Spring\nSpring provides mock objects and testing support classes for Unit Testing.\nTests one unit of functionality\nKeeps dependencies minimal\nIsolate from the environment (including Spring)\nSpring provides first-class support for integration testing.\nTests the interaction of multiple units working together\nIntegrates infrastructure like database\nHow can you create a shared application context in a JUnit integration test\nSpring's integration testing support has the following primary goals:\n\nTo manage Spring IoC container caching between tests. By default, once loaded, the configured ApplicationContext is reused for each test.\nTo provide Dependency Injection of test fixture instances.\nTo provide transaction management appropriate to integration testing.\nTo supply Spring-specific base classes that assist developers in writing integration tests.\nhttps://mossgreen.github.io/Spring-Certification-Testing/"
+  },
+  {
+    "id": 158,
+    "formulation": "AOP components",
+    "category": 13,
+    "answer": "1 Aspect\nThis is a module which has a set of APIs providing cross-cutting requirements. For example, a logging module would be called AOP aspect for logging. An application can have any number of aspects depending on the requirement.\n2 Join point\nThis represents a point in your application where you can plug-in the AOP aspect. You can also say, it is the actual place in the application where an action will be taken using Spring AOP framework.\n3 Advice\nThis is the actual action to be taken either before or after the method execution. This is an actual piece of code that is invoked during the program execution by Spring AOP framework.\n4 Pointcut\nThis is a set of one or more join points where an advice should be executed. You can specify pointcuts using expressions or patterns as we will see in our AOP examples.\n5 Introduction\nAn introduction allows you to add new methods or attributes to the existing classes.\n6 Target object\nThe object being advised by one or more aspects. This object will always be a proxied object, also referred to as the advised object.\n7 Weaving\nWeaving is the process of linking aspects with other application types or objects to create an advised object. This can be done at compile time, load time, or at runtime."
+  },
+  {
+    "id": 159,
+    "formulation": "AOP types of advices",
+    "category": 13,
+    "answer": "1 before\nRun advice before the a method execution.\n2 after\nRun advice after the method execution, regardless of its outcome.\n3 after-returning\nRun advice after the a method execution only if method completes successfully.\n4 after-throwing\nRun advice after the a method execution only if method exits by throwing an exception.\n5 around\nRun advice before and after the advised method is invoked."
+  },
+  {
+    "id": 160,
+    "formulation": "Describe AOP integration in Spring",
+    "category": 13,
+    "answer": "Aspect-Oriented Programming entails breaking down program logic into distinct parts called so-called concerns. The functions that span multiple points of an application are called cross-cutting concerns and these cross-cutting concerns are conceptually separate from the application's business logic. There are various common good examples of aspects like logging, auditing, declarative transactions, security, caching, etc.\nThe key unit of modularity in OOP is the class, whereas in AOP the unit of modularity is the aspect. Dependency Injection helps you decouple your application objects from each other and AOP helps you decouple cross-cutting concerns from the objects that they affect. AOP is like triggers in programming languages such as Perl, .NET, Java, and others.\nSpring AOP module provides interceptors to intercept an application. For example, when a method is executed, you can add extra functionality before or after the method execution."
+  },
+  {
+    "id": 161,
+    "formulation": "How to integrate Spring and Hibernate using HibernateDaoSupport",
+    "category": 13,
+    "answer": "Spring and Hibernate can integrate using Spring's SessionFactory called LocalSessionFactory. The integration process is of 3 steps.\n\nConfigure the Hibernate SessionFactory\nExtend your DAO Implementation from HibernateDaoSupport\nWire in Transaction Support with AOP"
+  },
+  {
+    "id": 162,
+    "formulation": "Beans lifecycle",
+    "category": 13,
+    "answer": "The life cycle of a Spring bean is easy to understand. When a bean is instantiated, it may be required to perform some initialization to get it into a usable state. Similarly, when the bean is no longer required and is removed from the container, some cleanup may be required.\nThough, there are lists of the activities that take place behind the scene between the time of bean Instantiation and its destruction, this chapter will discuss only two important bean life cycle callback methods, which are required at the time of bean initialization and its destruction.\nTo define setup and teardown for a bean, we simply declare the <bean> with initmethod and/or destroy-method parameters. The init method attribute specifies a method that is to be called on the bean immediately upon instantiation.\npublic class ExampleBean implements InitializingBean {\n   public void afterPropertiesSet() {\n      // do some initialization work\n   }\n}\nSimilarly, destroy method specifies a method that is called just before a bean is removed from the container. \npublic class ExampleBean implements DisposableBean {\n   public void destroy() {\n      // do some destruction work\n   }\n}"
+  },
+  {
+    "id": 163,
+    "formulation": "Spring Boot: What is the difference between @SpringBootApplication and @EnableAutoConfiguration annotation?",
+    "category": 13,
+    "answer": "The @SpringBootApplication does much more than what@EnableAutoConfiguration do. The @SpringBootApplication actually a combination of three annotations:\n\n1.@Configuration which is used in Java-based configuration on Spring framework\n2. @ComponentScan to enable component scanning of components you write e.g. @Controller classes\n3. @EnableAutoConfgiuration itself, which is used to enable auto-configuration in Spring Boot application.\n\nSpring Boot designers realize that these three annotations are frequently used together so they bundled them into @SpringBootApplicaiton. Now, instead of three annotations we just need to specify one annotation on our Main class.@SpringBootApplication annotation.\n\n1. Availability\nThe @SpringBootApplicaiton is new than @EnableAutoConfiguration. It was introduced in Spring Boot 1.2 release while @EnableAutoConfiguation is present form the Spring Boot 1.0 release.\n2. Purpose\nThe clear purpose of @EnableAutoConfiguration is to enable automatic configuration feature of Spring Boot application which automatically configures things if certain classes are present in Classpath. On the other hand, @SpringBootApplication does three things,it allows you to run the Main class as a JAR with an embedded container. Itenables Java configuration and it also enables Component Scanning.\n3. Uses\nIt's not mandatory to put @SpringBootApplication to create a Spring Boot application, you can still use @Configuration and@EnableAutoConfiguration individually."
+  },
+  {
+    "id": 164,
+    "formulation": "Spring Boot: What is Spring Actuator?",
+    "category": 13,
+    "answer": "Spring Boot Actuator provides secured endpoints for monitoring and managing your Spring Boot application. By default, all actuator endpoints are secured. In this chapter, you will learn in detail about how to enable Spring Boot actuator to your application.\n\nSome important Spring Boot Actuator endpoints are given below. You can enter them in your web browser and monitor your application behavior.\n\nENDPOINTS USAGE\n/metrics To view the application metrics such as memory used, memory free, threads, classes, system uptime etc.\n/env To view the list of Environment variables used in the application.\n/beans To view the Spring beans and its types, scopes and dependency.\n/health To view the application health\n/info To view the information about the Spring Boot application.\n/trace To view the list of Traces of your Rest endpoints."
+  },
+  {
+    "id": 165,
+    "formulation": "Spring Boot: What is auto-configuration in Spring boot?",
+    "category": 13,
+    "answer": "Spring based applications have a lot of configuration.\n\nWhen we use Spring MVC, we need to configure component scan, Dispatcher Servlet, a view resolver, web jars(for delivering static content) among other things. When we use Hibernate/JPA, we would need to configure a data source, an entity manager factory, a transaction manager among a host of other things. When auto-configuration is on, Spring Boot looks at a) Frameworks available on the CLASSPATH b) Existing configuration for the application. Based on these, Spring Boot provides basic configuration needed to configure the application with these frameworks. This is called Auto Configuration."
+  },
+  {
+    "id": 166,
+    "formulation": "Spring Boot: What are some common Spring Boot annotations?",
+    "category": 13,
+    "answer": "1) @Required. This annotation is applied on bean setter methods.\n2) @Autowired. This annotation is applied on fields, setter methods, and constructors. \n3) @Qualifier. This annotation is used along with @Autowired annotation. \n4) @Configuration. \n5) @ComponentScan. \n6) @Bean. \n7) @Lazy. \n8) @Value"
+  },
+  {
+    "id": 167,
+    "formulation": "How does SpringBoot implement microservices",
+    "category": 13,
+    "answer": ""
+  },
+  {
+    "id": 169,
+    "formulation": "What is REST",
+    "category": 14,
+    "answer": "Representational state transfer (REST) is a software architectural style that defines a set of constraints to be used for creating Web services. Web services that conform to the REST architectural style, called RESTful Web services, provide interoperability between computer systems on the internet. RESTful Web services allow the requesting systems to access and manipulate textual representations of Web resources by using a uniform and predefined set of stateless operations. Other kinds of Web services, such as SOAP Web services, expose their own arbitrary sets of operations - https://en.wikipedia.org/wiki/Representational_state_transfer\n1) Client-server  By separating the user interface concerns from the data storage concerns, we improve the portability of the user interface across multiple platforms and improve scalability by simplifying the server components.\n2) Stateless  Each request from client to server must contain all of the information necessary to understand the request, and cannot take advantage of any stored context on the server. Session state is therefore kept entirely on the client.\n3) Cacheable   Cache constraints require that the data within a response to a request be implicitly or explicitly labeled as cacheable or non-cacheable. If a response is cacheable, then a client cache is given the right to reuse that response data for later, equivalent requests.\n4) Uniform interface  By applying the software engineering principle of generality to the component interface, the overall system architecture is simplified and the visibility of interactions is improved. In order to obtain a uniform interface, multiple architectural constraints are needed to guide the behavior of components. REST is defined by four interface constraints: identification of resources; manipulation of resources through representations; self-descriptive messages; and, hypermedia as the engine of application state.\n5) Layered system  The layered system style allows an architecture to be composed of hierarchical layers by constraining component behavior such that each component cannot see beyond the immediate layer with which they are interacting.\n6) Code on demand (optional)  REST allows client functionality to be extended by downloading and executing code in the form of applets or scripts. This simplifies clients by reducing the number of features required to be pre-implemented."
+  },
+  {
+    "id": 170,
+    "formulation": "What microservices patterns do you know?",
+    "category": 14,
+    "answer": ""
+  },
+  {
+    "id": 171,
+    "formulation": "How to migrate from monolythic application to microservices?",
+    "category": 14,
+    "answer": ""
+  },
+  {
+    "id": 172,
+    "formulation": "What is Resource?",
+    "category": 14,
+    "answer": "The key abstraction of information in REST is a resource. Any information that can be named can be a resource: a document or image, a temporal service, a collection of other resources, a non-virtual object (e.g. a person), and so on. REST uses a resource identifier to identify the particular resource involved in an interaction between components.\n\nThe state of the resource at any particular timestamp is known as resource representation. The data format of a representation is known as a media type. The media type identifies a specification that defines how a representation is to be processed. A truly RESTful API looks like hypertext."
+  },
+  {
+    "id": 173,
+    "formulation": "Which kind of requests are mapped to  which methods?",
+    "category": 14,
+    "answer": "Roy Fielding has never mentioned any recommendation around which method to be used in which condition. All he emphasizes is that it should be uniform interface. If you decide HTTP POST will be used for updating a resource  rather than most people recommend HTTP PUT  it's alright and application interface will be RESTful.\n\nIdeally, everything that is needed to change the resource state shall be part of API response for that resource  including methods and in what state they will leave the representation."
+  },
+  {
+    "id": 175,
+    "formulation": "Benefits and risks of using Hibernate",
+    "category": 15,
+    "answer": "Advantages\nHibernate is free and open source framework\nHibernate provides a mechanism to maps Java classes to database tables and from Java data types to SQL data types so programmers no need to write code for this.\nHibernate provided Dialect classes for the different database, so you no need to write SQL queries in hibernate\nHibernate is Database independent framework and it has HQL (Hibernate Query Language) which is database independent it means you no need to write code specific to database.\nThere is no more knowledge required of SQL is needed for working with hibernate.\nHibernate do query tuning by using Criteria queries itself and not required to do extra work for it.\nHibernate supports Inheritance so that you save the derived class object and its base class object will also be saved into the database.\nHibernate support cache, so data can be placed in the cache for better performance. Where as in JDBC java cache is need to be implemented.\nHibernate supports by default first level cache so it reduces the number of round trips between application and database.\nHibernate supports a variety of relational database like One-To-One, One-To-Many, Many-To-One, Many-To-Many.\nHibernate has capability to generate primary keys automatically while we are storing the records into database.\nHibernate provides Productivity, Maintainability, Portability.\nHibernate supports Collections like List,Set,Map\nYou need to catch all exceptions in JDBC i.e checked exceptions, so you must write code in try, catch and throws, but in hibernate you no need to write code in try and catch block for it and all exceptions are Un-checked exceptions\nDisadvantages\nIf it is a small project with few tables, so there is no need for ORM framework like hibernate In such case a normal JDBC is enough.\nHibernate has a performance cost as it adds a layer over jdbc. Also with Hibernate lot of table configuration information is read at start up adding to the start up time of your application.\nHibernate is not suitable for Batch processing you have to use pure JDBC for batch processing.\nHibernate is slow because it uses run time reflection but Modern JVMs implement reflection extremely efficiently In the very latest versions of Hibernate, 'reflection' is optimized via the CGLIB runtime bytecode generation library. You can use native sql if it is going to be complex scenarios."
+  },
+  {
+    "id": 176,
+    "formulation": "What is a SessionFactory? Is it a thread-safe object?  (hibernate)",
+    "category": 15,
+    "answer": "The SessionFactory is heavyweight object so usually it is created during application start up and kept for later use.The SessionFactory is a thread safe object and used by all the threads of an application.  You would need one SessionFactory object per database using a separate configuration file. So if you are using multiple databases then you would have to create multiple SessionFactory objects."
+  },
+  {
+    "id": 177,
+    "formulation": "SessionFactory vs Session (hibernate)",
+    "category": 15,
+    "answer": "SessionFactory is a factory class for Session objects. It is available for the whole application while a Session is only available for particular transaction.\nSession is short-lived while SessionFactory objects are long-lived. SessionFactory provides a second level cache and Session provides a first level cache."
+  },
+  {
+    "id": 178,
+    "formulation": "EntityManager vs EntityManagerFactory  (JPA)",
+    "category": 15,
+    "answer": "An EntityManagerFactory is constructed for a specific database, and by managing resources efficiently (e.g. a pool of sockets), it provides an efficient way to construct multiple EntityManager instances for that database"
+  },
+  {
+    "id": 179,
+    "formulation": "What is the difference between merge and update (hibernate)",
+    "category": 15,
+    "answer": "Both the MERGE and UPDATE statements are designed to modify data in one table based on data from another, but MERGE can do much more.\nWhereas UPDATE can only modify column values you can use the MERGE statement to synchronize all data changes such as removal and addition of row.  The MERGE statement is structured to handle all three operations, INSERT, UPDATE, and DELETE, in one command.\nWhen you just need to UPDATE data you're better off using the UPDATE statement as the MERGE statement is built to handle several matching scenarios, it is more complex and may run less efficiently."
+  },
+  {
+    "id": 180,
+    "formulation": "What is difference between merge and refresh (jpa)",
+    "category": 15,
+    "answer": "Sometimes we face situation where we application database is modified with some external application/agent and thus corresponding hibernate entity in your application actually becomes out of sync with it's database representation i.e. having old data. In this case, you can use session.refresh() method to re-populate the entity with latest data available in database.\nMethod merge() does exactly opposite to what refresh() does i.e. It updates the database with values from a detached entity. Refresh method was updating the entity with latest database information. Merging is performed when you desire to have a detached entity changed to persistent state again, with the detached entity's changes migrated to (or overriding) the database."
+  },
+  {
+    "id": 181,
+    "formulation": "What is Hibernate Query Language/ Java Persistence Query Language (HQL/JPQL)? (hibernate/jpa)",
+    "category": 15,
+    "answer": ""
+  },
+  {
+    "id": 182,
+    "formulation": "Lazy loading (hibernate/jpa)",
+    "category": 15,
+    "answer": "have a parent and that parent has a collection of children. Hibernate now can \"lazy-load\" the children, which means that it does not actually load all the children when loading the parent. Instead, it loads them when requested to do so. You can either request this explicitly or, and this is far more common, hibernate will load them automatically when you try to access a child.\n\nLazy-loading can help improve the performance significantly since often you won't need the children and so they will not be loaded.\n\nAlso beware of the n+1-problem. Hibernate will not actually load all children when you access the collection. Instead, it will load each child individually. When iterating over the collection, this causes a query for every child. In order to avoid this, you can trick hibernate into loading all children simultaneously, e.g. by calling parent.getChildren().size()."
+  },
+  {
+    "id": 183,
+    "formulation": "n+1 problem",
+    "category": 15,
+    "answer": "The N+1 query problem happens when the data access framework executed N additional SQL statements to fetch the same data that could have been retrieved when executing the primary SQL query."
+  },
+  {
+    "id": 184,
+    "formulation": "Describe concept of JPA (ex: EntityManager, EntityManagerFactory, PersistenceContext, PersistenceUnit) - (jpa)",
+    "category": 15,
+    "answer": "The following classes describes each of the units in JPA architecture:\n\n1) EntityManagerFactory This is a factory class of EntityManager. It creates and manages multiple EntityManager instances.\n2) EntityManager It is an Interface, it manages the persistence operations on objects. It works like factory for Query instance.\n3) Entity Entities are the persistence objects, stores as records in the database.\n4) EntityTransaction It has one-to-one relationship with EntityManager. For each EntityManager, operations are maintained by EntityTransaction class.\n5) Persistence This class contain static methods to obtain EntityManagerFactory instance.\n6) Query This interface is implemented by each JPA vendor to obtain relational objects that meet the criteria.\nThe above classes and interfaces are used for storing entities into a database as a record. They  reduce efforts to write codes for storing data into a database so that they can concentrate on more important activities such as writing codes for mapping the classes with database tables."
+  },
+  {
+    "id": 185,
+    "formulation": "Describe annotation: @Temporal/@Transient/@Table/@Version?  - (jpa)",
+    "category": 15,
+    "answer": ""
+  },
+  {
+    "id": 186,
+    "formulation": "What do you mean by Named SQL query and how to invoke it? (hibernate/jpa)",
+    "category": 15,
+    "answer": ""
+  },
+  {
+    "id": 187,
+    "formulation": "What is the difference between sorted and ordered collection in hibernate? (hibernate/jpa?)",
+    "category": 15,
+    "answer": "Sorted collection is the way of sorting a collection by leveraging the sorting features provided by the Java collections framework. This sorting uses Java comparator and it takes place in the memory of JVM in which Hibernate is running, once the data being read from database.\nOrdered collection refers to the sorting of a collection by specifying the order-by clause when retrieval.\nOrdered collection is preferred for larger data set whereas if the collection is considerably small, sorted collection is preferred."
+  },
+  {
+    "id": 188,
+    "formulation": "Difference between get() and load() (hibernate)",
+    "category": 15,
+    "answer": "In hibernate, get() and load() are two methods which is used to fetch data for the given identifier. They both belong to Hibernate session class. Get() method return null, If no row is available in the session cache or the database for the given identifier whereas load() method throws object not found exception. \n\n1 Basic \nIt  is used to fetch data from the database for the given identifier  \nIt  is also used to fetch data from the database for the given identifier \n2 Null Object \nIt object not found for the given identifier then it will return null object \nIt will throw object not found exception \n3 Lazy or Eager loading \nIt returns fully initialized object so this method eager load the object  \nIt always returns proxy object so this method is lazy load the object  \n4 Performance \nIt is slower than load() because it return fully initialized object which impact the performance of the application \nIt is slightly faster.\n5 Use Case\nIf you are not sure that object exist then use get() method \nIf you are sure that object exist then use load() method"
+  },
+  {
+    "id": 189,
+    "formulation": "find() vs getReference()  - (jpa)",
+    "category": 15,
+    "answer": "EntityManager.getReference() throws an EntityNotFoundException if it cant find the entity being searched for which is very convenient in itself. EntityManager.find() method merely returns null if it cant find the entity."
+  },
+  {
+    "id": 190,
+    "formulation": "What are the entity states in Hibernate (hibernate - 3 states/jpa - 4 states (additional removed))",
+    "category": 15,
+    "answer": "1) New (Transient)\nA newly created object that hasn't ever been associated with a Hibernate Session (a.k.a Persistence Context) and is not mapped to any database table row is considered to be in the New (Transient) state. To become persisted we need to either explicitly call the EntityManager#persist method or make use of the transitive persistence mechanism.\n Because no session is aware of it, it won't be saved automatically.\nSession session = openSession();\nUserEntity userEntity = new UserEntity(\"John\");\nassertThat(session.contains(userEntity)).isFalse();\n2) Persistent (Managed)\nA persistent entity has been associated with a database table row and it's being managed by the current running Persistence Context. Any change made to such entity is going to be detected and propagated to the database (during the Session flush-time). With Hibernate, we no longer have to execute INSERT/UPDATE/DELETE statements. Hibernate employs a transactional write-behind working style and changes are synchronized at the very last responsible moment, during the current Session flush-time.\nSession session = openSession();\nUserEntity userEntity = new UserEntity(\"John\");\nsession.persist(userEntity);\nassertThat(session.contains(userEntity)).isTrue();\n3) Detached\nOnce the current running Persistence Context is closed all the previously managed entities become detached. Successive changes will no longer be tracked and no automatic database synchronization is going to happen.\nWhen we close the session, all objects inside it become detached. Although they still represent rows in the database, they're no longer managed by any session:\nsession.persist(userEntity);\nsession.close();\nassertThat(session.isOpen()).isFalse();\nassertThatThrownBy(() -> session.contains(userEntity));\nTo associate a detached entity to an active Hibernate Session, you can choose one of the following options:\na) ReattachingHibernate (but not JPA 2.1) supports reattaching through the Session#update method. A Hibernate Session can only associate one Entity object for a given database row. This is because the Persistence Context acts as an in-memory cache (first level cache) and only one value (entity) is associated to a given key (entity type and database identifier).\nAn entity can be reattached only if there is no other JVM object (matching the same database row) already associated to the current Hibernate Session.\nb) Merging\nThe merge operaration is going to copy the detached entity state (source) to a managed entity instance (destination). If the merging entity has no equivalent in the current Session, one will be fetched from the database. The detached object instance will continue to remain detached even after the merge operation.\n4) Removed\nAlthough JPA demands that managed entities only are allowed to be removed, Hibernate can also delete detached entities (but only through a Session#delete method call)."
+  },
+  {
+    "id": 191,
+    "formulation": "Hierarchy-to-tables mapping strategies (hibernate/jpa)",
+    "category": 15,
+    "answer": ""
+  },
+  {
+    "id": 192,
+    "formulation": "What are the Collection types in Hibernate ?",
+    "category": 15,
+    "answer": "Hibernate only support Collection Types that extends from the interfaces Set, Map, and Collection"
+  },
+  {
+    "id": 193,
+    "formulation": "Caching levels (hibernate/jpa)",
+    "category": 15,
+    "answer": "One of the advantages of database abstraction layers such as ORM (object-relational mapping) frameworks is their ability to transparently cache data retrieved from the underlying store. This helps eliminate database-access costs for frequently accessed data.\n\nHibernate has the concept of first-level cache. It is a session scoped cache which ensures that each entity instance is loaded only once in the persistent context.\nOnce the session is closed, first-level cache is terminated as well. This is actually desirable, as it allows for concurrent sessions to work with entity instances in isolation from each other.\nOn the other hand, second-level cache is SessionFactory-scoped, meaning it is shared by all sessions created with the same session factory. When an entity instance is looked up by its id (either by application logic or by Hibernate internally, e.g. when it loads associations to that entity from other entities), and if second-level caching is enabled for that entity, the following happens:\n\nIf an instance is already present in the first-level cache, it is returned from there\nIf an instance is not found in the first-level cache, and the corresponding instance state is cached in the second-level cache, then the data is fetched from there and an instance is assembled and returned\nOtherwise, the necessary data are loaded from the database and an instance is assembled and returned\nOnce the instance is stored in the persistence context (first-level cache), it is returned from there in all subsequent calls within the same session until the session is closed or the instance is manually evicted from the persistence context."
+  },
+  {
+    "id": 194,
+    "formulation": "How to create own user type in hibernate? (hibernate)",
+    "category": 15,
+    "answer": "Hibernate simplifies data handling between SQL and JDBC by mapping the Object Oriented model in Java with the Relational model in Databases. Although mapping of basic Java classes is in-built in Hibernate, mapping of custom types is often complex. Hibernate categorizes the types into Entity Types and Value Types. Specifically, Entity types are used to map domain specific Java entities and hence, exist independently of other types in the application. In contrast, Value Types are used to map data objects instead and are almost always owned by the Entities."
+  },
+  {
+    "id": 195,
+    "formulation": "How is laziness One-To-Many  implemented in hibernate (hibernate)",
+    "category": 15,
+    "answer": "Hibernate applies lazy loading approach on entities and associations by providing a proxy implementation of classes.\n\nHibernate intercepts calls to an entity by substituting it with a proxy derived from an entity's class. In our example, when a requested information is missing, it will be loaded from a database before control is ceded to the User class implementation.\n\nIt should also be noted that when the association is represented as a collection class (in the above examples it is represented as Set<OrderDetail> orderDetailSet), then a wrapper is created and substituted for an original collection."
+  },
+  {
+    "id": 196,
+    "formulation": "new features of jpa 2.1 - (jpa)",
+    "category": 15,
+    "answer": ""
+  },
+  {
+    "id": 197,
+    "formulation": "Describe converters in Jpa  2.1 - (jpa)",
+    "category": 15,
+    "answer": "First, let's create a PersonName class - that will be converted later:\npublic class PersonName implements Serializable {\n    private String name;\n    private String surname;\n}\nThen, we'll add an attribute of type PersonName to an @Entity class:\n@Entity(name = \"PersonTable\")\npublic class Person {\n    private PersonName personName;\n}\nNow we need to create a converter that transforms the PersonName attribute to a database column and vice-versa. In our case, we'll convert the attribute to a String value that contains both name and surname fields."
+  },
+  {
+    "id": 198,
+    "formulation": "Statements order during flushing the session (hibernate)",
+    "category": 15,
+    "answer": "SQL statements are issued in the following order when a session is flushed:\n\n1) all entity insertions, in the same order the corresponding objects were saved using ISession.Save()\n2) all entity updates\n3) all collection deletions\n4) all collection element deletions, updates and insertions\n5) all collection insertions\n6) all entity deletions, in the same order the corresponding objects were deleted using ISession.Delete()\nReason:  the safest way \nHibernate shifts the developer mindset from SQL to entity state transitions. A JPA entity may be in one of the following states:\n1) New/Transient: the entity is not associated with a persistence context, be it a newly created object the database doesn't know anything about.\n2) Persistent: the entity is associated with a persistence context (residing in the 1st Level Cache) and there is a database row representing this entity.\n3) Detached: the entity was previously associated with a persistence context, but the persistence context was closed, or the entity was manually evicted.\n4) Removed: the entity was marked as removed and the persistence context will remove it from the database at flush time.\nMoving an object from one state to another is done by calling the EntityManager methods such as:\npersist\nmerge\nremove"
+  },
+  {
+    "id": 200,
+    "formulation": "What are DML and DDL",
+    "category": 16,
+    "answer": "DDL is short name of Data Definition Language, which deals with database schemas and descriptions, of how the data should reside in the database.\nCREATE - to create database and its objects like (table, index, views, store procedure, function and triggers).\nALTER - alters the structure of the existing database.\nDROP - delete objects from the database.\nTRUNCATE - remove all records from a table; also, all spaces allocated for the records are removed.\nCOMMENT - add comments to the data dictionary.\nRENAME - rename an object.\nDML\n\nDML is short name of Data Manipulation Language which deals with data manipulation, and includes most common SQL statements such SELECT, INSERT, UPDATE, DELETE etc, and it is used to store, modify, retrieve, delete and update data in database.\nSELECT - retrieve data from one or more tables.\nINSERT - insert data into a table.\nUPDATE - updates existing data within a table.\nDELETE - delete all records from a table.\nMERGE - UPSERT operation (insert or update)\nCALL - call a PL/SQL or Java subprogram.\nEXPLAIN PLAN - interpretation of the data access path.\nLOCK TABLE - concurrency control.\n\nDCL is short name of Data Control Language which includes commands such as GRANT, and mostly concerned with rights, permissions and other controls of the database system.\nGRANT - allow users access privileges to database.\nREVOKE - withdraw users access privileges given by using the GRANT command.\n\nTCL is short name of Transaction Control Language which deals with transaction within a database.\nCOMMIT - commits a transaction.\nROLLBACK - rollback a transaction in case of any error occurs.\nSAVEPOINT - a point inside a transaction that allows rollback state to what it was at the time of the savepoint.\nSET TRANSACTION - specify characteristics for the transaction."
+  },
+  {
+    "id": 201,
+    "formulation": "Aggregate functions with examples",
+    "category": 16,
+    "answer": "The following are the most commonly used SQL aggregate functions:\n\nAVG - calculates the average of a set of values.\nCOUNT - counts rows in a specified table or view.\nMIN - gets the minimum value in a set of values.\nMAX - gets the maximum value in a set of values.\nSUM - calculates the sum of values.\nNotice that all aggregate functions above ignore NULL values except for the COUNT function."
+  },
+  {
+    "id": 202,
+    "formulation": "Primary key vs unique key",
+    "category": 16,
+    "answer": "The primary key and unique key are two important concepts in a relational database and both are used to uniquely identify a row in a table, but there is some subtle difference\n1) Unique key in a table can be null, at-least one but the primary key cannot be null in any table in a relational database like MySQL, Oracle etc.\n2) The primary key can be a combination of more than one unique keys in the same table.\n3) There can be only one primary key per table in relation database, but there can be more than one unique key per table.\n4) The unique key is represented using unique constraint while a primary key is created using primary key constraint in any table and it's automatically got unique constraint. 5) Many database engines automatically put clustered index on the primary key and since you can only have one clustered index per table, it's not available to any other unique key at same time."
+  },
+  {
+    "id": 203,
+    "formulation": "What are transactions?",
+    "category": 16,
+    "answer": "A transaction is a unit of work that you want to treat as \"a whole.\" It has to either happen in full or not at all.\nA classical example is transferring money from one bank account to another. To do that you have first to withdraw the amount from the source account, and then deposit it to the destination account. The operation has to succeed in full. If you stop halfway, the money will be lost. All types of database access operation which are held between the beginning and end transaction statements are considered as a single logical transaction in DBMS. During the transaction the database is inconsistent. Only once the database is committed the state is changed from one consistent state to another."
+  },
+  {
+    "id": 204,
+    "formulation": "What is ACID?",
+    "category": 16,
+    "answer": "A transaction is a way of representing a state change. Transactions ideally have four properties, commonly known as ACID:\n\nAtomic (if the change is committed, it happens in one fell swoop; you can never see \"half a change\")\nConsistent (the change can only happen if the new state of the system will be valid; any attempt to commit an invalid change will fail, leaving the system in its previous valid state)\nIsolated (no-one else sees any part of the transaction until it's committed)\nDurable (once the change has happened - if the system says the transaction has been committed, the client doesn't need to worry about \"flushing\" the system to make the change \"stick\")"
+  },
+  {
+    "id": 205,
+    "formulation": "What is a view/materialized view.",
+    "category": 16,
+    "answer": "What is View in database\nViews are a logical virtual table created by 'select query' but the result is not stored anywhere in the disk and every time we need to fire the query when we need data, so always we get updated or latest data from original tables.\nThe performance of the view depends on our select query. If we want to improve the performance of view we should avoid using join statements in our query or if we need multiple joins between table always try to use the index-based column for joining as we know index-based columns are faster than a non-index based column.\nView also allows storing the definition of the query in the database itself.\n\nWhat is Materialized View in database\nMaterialized views are also the logical view of our data-driven by the select query but the result of the query will get stored in the table or disk, also the definition of the query will also store in the database.\nWhen we see the performance of Materialized view it is better than normal View because the data of materialized view will be stored in table and table may be indexed. Also joining is done at the time of materialized views so no need to every time fire join statement as in case of view.\n\nWhat is difference between View and Materialized View in Database or SQL?\n1) In Views query result is not stored in the disk or database but Materialized view allow to store the query result in disk or table.\n2) When we create a view using any table, rowid of view is same as the original table but in case of Materialized view rowid is different. \n3) In case of View we always get latest data but in case of Materialized view we need to refresh the view for getting latest data.\n4) Performance of View is less than Materialized view.\n5) In case of view its only the logical view of table no separate copy of table but in case of Materialized view we get physically separate copy of table\n6) In case of Materialized view we need an extra trigger or some automatic method so that we can keep MV refreshed, this is not required for views in the database."
+  },
+  {
+    "id": 206,
+    "formulation": "What types of constraints do you know?",
+    "category": 16,
+    "answer": "1) Domain constraint. a) Domain constraint defines the domain (=range) or set of values for an attribute (f.e. type of value in column) b)  It specifies that the value taken by the attribute must be the atomic value from its domain.\n2) Tuple Uniqueness constraint. Tuple Uniqueness constraint specifies that all the tuples must be necessarily unique in any relation.\n3) Key constraint.  This constraint specifies that in any relation: a) All the values of primary key must be unique, b) The value of primary key must not be null.\n4) Entity Integrity constraint. a) Entity integrity constraint specifies that no attribute of primary key must contain a null value in any relation - this is because the presence of null value in the primary key violates the uniqueness property.\n5) Referential Integrity constraint. a) This constraint is enforced when a foreign key references the primary key of a relation. b) All the values taken by the foreign key must either be available in the relation of the primary key or be null."
+  },
+  {
+    "id": 207,
+    "formulation": "Are database Indexes useful? What is the role of them?",
+    "category": 16,
+    "answer": "Why is it needed?\n\nWhen data is stored on disk-based storage devices, it is stored as blocks of data. These blocks are accessed in their entirety, making them the atomic disk access operation. Disk blocks are structured in much the same way as linked lists; both contain a section for data, a pointer to the location of the next node (or block), and both need not be stored contiguously.\nDue to the fact that a number of records can only be sorted on one field, we can state that searching on a field that isn't sorted requires a Linear Search which requires N/2 block accesses (on average), where N is the number of blocks that the table spans. If that field is a non-key field (i.e. doesn't contain unique entries) then the entire tablespace must be searched at N block accesses.\nWhereas with a sorted field, a Binary Search may be used, which has log2 N block accesses. Also since the data is sorted given a non-key field, the rest of the table doesn't need to be searched for duplicate values, once a higher value is found. Thus the performance increase is substantial.\n\nWhat is indexing?\nIndexing is a way of sorting a number of records on multiple fields. Creating an index on a field in a table creates another data structure which holds the field value, and a pointer to the record it relates to. This index structure is then sorted, allowing Binary Searches to be performed on it.\nThe downside to indexing is that these indices require additional space on the disk since the indices are stored together in a table"
+  },
+  {
+    "id": 208,
+    "formulation": "What kind of joins do you know?",
+    "category": 16,
+    "answer": "the different types of the JOINs in SQL:\n\n(INNER) JOIN: Returns records that have matching values in both tables\nLEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table\nRIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table\nFULL (OUTER) JOIN: Returns all records when there is a match in either left or right table\nCROSS JOIN: Returns all records made from combination of records in left and right tables"
+  },
+  {
+    "id": 209,
+    "formulation": "What is the difference between inner join and outer join?",
+    "category": 16,
+    "answer": "Assuming you're joining on columns with no duplicates, which is a very common case:\nAn inner join of A and B gives the result of A intersect B, i.e. the inner part of a Venn diagram intersection.\nAn outer join of A and B gives the results of A union B, i.e. the outer parts of a Venn diagram union."
+  },
+  {
+    "id": 210,
+    "formulation": "Truncate vs. Delete commands",
+    "category": 16,
+    "answer": "What is Truncate command in SQL\nUse the truncate table if you need to delete all rows since truncate doesn't allow you to specify WHERE clause. truncate removes data by deallocating space used by a table which removes a lot of overhead in terms of logging and locking and that's why to truncate is faster than delete.\nWhat you need to take care is a rollback, data deleted by truncate can not be rolled back until data server specifically supports it e.g. MSSQL Server which allows to commit or rollback truncate table statement transactional. \nAnother caveat with truncate table statement is that it doesn't fire a trigger and you can not truncate a table when a foreign key references any column to the table to be truncated. \nThe only situation I see which is perfect for using truncate is purging tables with huge data, though there is another solution exists to drop table and recreated it if that makes sense.\n\nExample of truncate command in SQL\ntruncate table Orders;  //Order table shouldn't have a column which is foreign key on another table\n\nWhat is Delete command in SQL?\nDelete is another SQL command available for removing records from the table. Delete is even more flexible than truncate like it provides support to WHERE Clause which can be used to remove selective data. \nIt logs each row which allows an operation to be rolled back and it also fires triggers. One disadvantage of using delete is speed and locking. Delete acquires a lock on the table and its also very slow operation because of logging, which makes it unsuitable for removing records from large tables. \nOne workaround for this is batch-delete in which you remove a batch of records instead on one record at a time. \nDelete is most suitable for removing selective data and use it where you want to roll back the transaction in the database. It's not useful to purge a large amount of data from tables and should not be used, otherwise, it could lock the table for a very long time, blew log segment, and can take ages to complete.\n\nExample of delete commands in SQL\n\ndelete  * from Orders; //delete all row from Orders, should not be used if Orders is large\ndelete  * from Orders where Symbol=\"MSFT.NQ\" //delete all orders where symbol is MSFT.NQ\n\nDifference between truncate and delete command in SQL\nThis is an important point to understand before using truncate or delete on the production environment, or writing any script which purges data from tables.\n\n1. truncate is fast delete is slow.\n2. truncate doesn't do logging delete logs on per row basis.\n3. rollback is possible with delete not with truncate until specifically supported by the vendor.\n4. truncate doesn't fire trigger, delete does.\n5. Don't delete, truncate it when it comes to purge tables.\n6. truncate reset identity column in table if any, delete doesn't.\n7. truncate is DDL while delete is DML (use this when you are writing exam)\n8. truncate doesn't support where clause, delete does.\n\nSo finally if you have table with huge data and want to empty it don't Delete, truncate it"
+  },
+  {
+    "id": 211,
+    "formulation": "Why many indexes are not good for performance",
+    "category": 16,
+    "answer": "It depends on the operations that occur on the table.\nIf there's lots of SELECTs and very few changes, index all you like.... these will (potentially) speed the SELECT statements up.\nIf the table is heavily hit by UPDATEs, INSERTs + DELETEs ... these will be very slow with lots of indexes since they all need to be modified each time one of these operations takes place."
+  },
+  {
+    "id": 212,
+    "formulation": "What transaction isolation levels do you know?",
+    "category": 16,
+    "answer": "Transaction isolation level is a concept that is not exclusive to the Spring framework. It is applied to transactions in general and is directly related with the ACID transaction properties. Isolation level defines how the changes made to some data repository by one transaction affect other simultaneous concurrent transactions, and also how and when that changed data becomes available to other transactions. When we define a transaction using the Spring framework we are also able to configure in which isolation level that same transaction will be executed.\n\nUsage example\nUsing the @Transactional annotation we can define the isolation level of a Spring managed bean transactional method. This means that the transaction in which this method is executed will run with that isolation level:\n\nIsolation level in a transactional method\n@Autowired\nprivate TestDAO testDAO;\n\n@Transactional(isolation=Isolation.READ_COMMITTED)\npublic void someTransactionalMethod(User user) {\n  // Interact with testDAO\n}\nhttps://www.byteslounge.com/tutorials/spring-transaction-isolation-tutorial\nREAD_UNCOMMITTED isolation level states that a transaction may read data that is still uncommitted by other transactions. This constraint is very relaxed in what matters to transactional concurrency but it may lead to some issues like dirty reads. READ_COMMITTED isolation level states that a transaction can't read data that is not yet committed by other transactions. This means that the dirty read is no longer an issue, but even this way other issues may occur. REPEATABLE_READ isolation level states that if a transaction reads one record from the database multiple times the result of all those reading operations must always be the same. This eliminates both the dirty read and the non-repeatable read issues, but even this way other issues may occur. SERIALIZABLE isolation level is the most restrictive of all isolation levels. Transactions are executed with locking at all levels (read, range and write locking) so they appear as if they were executed in a serialized way. This leads to a scenario where none of the issues mentioned above may occur, but in the other way we don't allow transaction concurrency and consequently introduce a performance penalty."
+  },
+  {
+    "id": 213,
+    "formulation": "Which of SELECT, UPDATE, DELETE, ADD's performance is mostly affected by performance of indexes?",
+    "category": 16,
+    "answer": ""
+  },
+  {
+    "id": 214,
+    "formulation": "Types of tables (regular, temporary, index-organized etc)",
+    "category": 16,
+    "answer": "An index-organized table has a storage organization that is a variant of a primary B-tree. Unlike an ordinary (heap-organized) table whose data is stored as an unordered collection (heap), data for an index-organized table is stored in a B-tree index structure in a primary key sorted manner."
+  },
+  {
+    "id": 215,
+    "formulation": "What does it mean database de-normalization?",
+    "category": 16,
+    "answer": ""
+  },
+  {
+    "id": 216,
+    "formulation": "What are normal forms?",
+    "category": 16,
+    "answer": "1NF (First Normal Form) Rules\nEach table cell should contain a single value.\nEach record needs to be unique.\n2NF (Second Normal Form) Rules\nRule 1- Be in 1NF\nRule 2- Single Column Primary Key\n3NF (Third Normal Form) Rules\nRule 1- Be in 2NF\nRule 2- Has no transitive functional dependencies"
+  },
+  {
+    "id": 217,
+    "formulation": "What are ways to increase performance of database",
+    "category": 16,
+    "answer": "1) Optimize the logical design\nThe logical level is about the structure of the query and tables themselves. Try to maximize this first. The goal is to access as few data as possible at the logical level.\nHave the most efficient SQL queries\nDesign a logical schema that support the application's need (e.g. type of the columns, etc.)\nDesign trade-off to support some use case better than other\nRelational constraints\nNormalization\n2) Optimize the physical design\nThe physical level deals with non-logical consideration, such as type of indexes, parameters of the tables, etc. Goal is to optimize the IO which is always the bottleneck. Tune each table to fit it's need. Small table can be loaded permanently loaded in the DBMS cache, table with low write rate can have different settings than table with high update rate to take less disk spaces, etc. Depending on the queries, different index can be used, etc. You can denormalized data transparently with materialized views, etc.\nTables paremeters (allocation size, etc.)\nIndexes (combined, types, etc.)\nSystem-wide parameters (cache size, etc.)\nPartitioning\nDenormalization\n3) Optimize the maintenance\nDatabase must be operated correctly to stay as efficient as possible. This include a few mainteanance taks that can have impact on the perofrmance, e.g.\nKeep statistics up to date\nRe-sequence critical tables periodically\nDisk maintenance\nAll the system stuff to have a server that rocks"
+  },
+  {
+    "id": 218,
+    "formulation": "What is difference between SQL and NoSQL?",
+    "category": 16,
+    "answer": "SQL databases are relational, NoSQL are non-relational.\nSQL databases use structured query language and have a predefined schema. NoSQL databases have dynamic schemas for unstructured data.\nSQL databases are vertically scalable, NoSQL databases are horizontally scalable.\nSQL databases are table based, while NoSQL databases are document, key-value, graph or wide-column stores.\nSQL databases are better for multi-row transactions, NoSQL are better for unstructured data like documents or JSON."
+  },
+  {
+    "id": 219,
+    "formulation": "Does every relational database implements SQL standard in the same way?",
+    "category": 16,
+    "answer": ""
+  },
+  {
+    "id": 220,
+    "formulation": "What is a nested subquery?",
+    "category": 16,
+    "answer": "A subquery can be nested inside other subqueries. SQL has an ability to nest queries within one another. A subquery is a SELECT statement that is nested within another SELECT statement and which return intermediate results. SQL executes innermost subquery first, then next level."
+  },
+  {
+    "id": 221,
+    "formulation": "Types of indices in Oracle",
+    "category": 16,
+    "answer": ""
+  },
+  {
+    "id": 222,
+    "formulation": "What is a hierarchical query? How to create it?",
+    "category": 16,
+    "answer": ""
+  },
+  {
+    "id": 223,
+    "formulation": "Partitioning and methods of partitioning",
+    "category": 16,
+    "answer": "A partition is a division of a logical database or its constituent elements into distinct independent parts. Database partitioning is normally done for manageability, performance or availability[1] reasons, or for load balancing. It is popular in distributed database management systems, where each partition may be spread over multiple nodes, with users at the node performing local transactions on the partition. This increases performance for sites that have regular transactions involving certain views of data, whilst maintaining availability and security.\n\nPartitioning criteria\nCurrent high-end relational database management systems provide for different criteria to split the database. They take a partitioning key and assign a partition based on certain criteria. Some common criteria include:\n\n1) Range partitioning: selects a partition by determining if the partitioning key is within a certain range. An example could be a partition for all rows where the \"zipcode\" column has a value between 70000 and 79999. It distributes tuples based on the value intervals (ranges) of some attribute. In addition to supporting exact-match queries (as in hashing), it is well-suited for range queries. For instance, a query with a predicate 'A between A1 and A2' may be processed by the only node(s) containing tuples.\n2) List partitioning: a partition is assigned a list of values. If the partitioning key has one of these values, the partition is chosen. For example, all rows where the column Country is either Iceland, Norway, Sweden, Finland or Denmark could build a partition for the Nordic countries.\n3) Composite partitioning: allows for certain combinations of the above partitioning schemes, by for example first applying a range partitioning and then a hash partitioning. Consistent hashing could be considered a composite of hash and list partitioning where the hash reduces the key space to a size that can be listed.\n4) Round-robin partitioning: the simplest strategy, it ensures uniform data distribution. With n partitions, the ith tuple in insertion order is assigned to partition (i mod n). This strategy enables the sequential access to a relation to be done in parallel. However, the direct access to individual tuples, based on a predicate, requires accessing the entire relation.\n5) Hash partitioning: applies a hash function to some attribute that yields the partition number. This strategy allows exact-match queries on the selection attribute to be processed by exactly one node and all other queries to be processed by all the nodes in parallel.\nPartitioning (sharding) methods\nThe partitioning can be done by either building separate smaller databases (each with its own tables, indices, and transaction logs), or by splitting selected elements, for example just one table.\n\nHorizontal partitioning involves putting different rows into different tables. For example, customers with ZIP codes less than 50000 are stored in CustomersEast, while customers with ZIP codes greater than or equal to 50000 are stored in CustomersWest. The two partition tables are then CustomersEast and CustomersWest, while a view with a union might be created over both of them to provide a complete view of all customers.\nVertical partitioning involves creating tables with fewer columns and using additional tables to store the remaining columns. Generally, this practice is known as normalization. However, vertical partitioning extends further and partitions columns even when already normalized. This type of partitioning is also called \"row splitting\", since rows get split by their columns, and might be performed explicitly or implicitly. Distinct physical machines might be used to realize vertical partitioning: Storing infrequently used or very wide columns, taking up a significant amount of memory, on a different machine, for example, is a method of vertical partitioning. A common form of vertical partitioning is to split static data from dynamic data, since the former is faster to access than the latter, particularly for a table where the dynamic data is not used as often as the static. Creating a view across the two newly created tables restores the original table with a performance penalty, but accessing the static data alone will show higher performance. A columnar database can be regarded as a database that has been vertically partitioned until each column is stored in its own table."
+  },
+  {
+    "id": 224,
+    "formulation": "clustered vs non-clustered index",
+    "category": 16,
+    "answer": "What is a Clustered index?\nCluster index is a type of index which sorts the data rows in the table on their key values. In the Database, there is only one clustered index per table. A clustered index defines the order in which data is stored in the table which can be sorted in only one way. So, there can be an only a single clustered index for every table. In an RDBMS, usually, the primary key allows you to create a clustered index based on that specific column.\n\nWhat is Non-clustered index?\nA Non-clustered index stores the data at one location and indices at another location. The index contains pointers to the location of that data. A single table can have many non-clustered indexes as an index in the non-clustered index is stored in different places. For example, a book can have more than one index, one at the beginning which displays the contents of a book unit wise while the second index shows the index of terms in alphabetical order.\nA non-clustering index is defined in the non-ordering field of the table. This type of indexing method helps you to improve the performance of queries that use keys which are not assigned as a primary key. A non-clustered index allows you to add a unique key for a table.\n\nKEY DIFFERENCE\nCluster index is a type of index that sorts the data rows in the table on their key values whereas the Non-clustered index stores the data at one location and indices at another location.\nClustered index stores data pages in the leaf nodes of the index while Non-clustered index method never stores data pages in the leaf nodes of the index.\nCluster index doesn't require additional disk space whereas the Non-clustered index requires additional disk space.\nCluster index offers faster data accessing, on the other hand, Non-clustered index is slower."
+  },
+  {
+    "id": 225,
+    "formulation": "What is a bitmap index",
+    "category": 16,
+    "answer": "A bitmap index is a special kind of database index that uses bitmaps.  A better representation of a bitmap index, is if given the sample above:\n\nIdentifier    Gender          RowID\n1             Female          R1\n2             Male            R2\n3             Male            R3\n4             Unspecified     R4\n5             Female          R5\nthe a bitmap index on the gender column would (conceptually) look like this (reason - one can presort all records by a few categories and perform fast joins):\n\nGender         R1  R2  R3  R4  R5\nFemale           1     0    0    0    1\nMale                0     1    1    0    0\nUnspecified  0     0    0    1    0"
+  },
+  {
+    "id": 227,
+    "formulation": "How to get list of running processes?",
+    "category": 17,
+    "answer": "ps -aux\nsudo ps -a"
+  },
+  {
+    "id": 228,
+    "formulation": "Hot to get thread dump of running java process (kill -3)",
+    "category": 17,
+    "answer": "jstack -l JAVA_PID > jstack.out\nNote the process ID number of the Java process (e.g. using top, a grep on ps -axw, etc.) and send a QUIT signal to the process with the kill -QUIT or kill -3 command. For example:\nkill -3 JAVA_PID"
+  },
+  {
+    "id": 229,
+    "formulation": "Describe grep / tail / less / more",
+    "category": 17,
+    "answer": ""
+  },
+  {
+    "id": 230,
+    "formulation": "Describe difference between TCP and UDP",
+    "category": 17,
+    "answer": "TCP is a connection-oriented protocol, whereas UDP is a connectionless protocol.\nThe speed for TCP is slower while the speed of UDP is faster\nTCP uses handshake protocol like SYN, SYN-ACK, ACK while UDP uses no handshake protocols\nTCP does error checking and also makes error recovery, on the other hand, UDP performs error checking, but it discards erroneous packets.\nTCP has acknowledgment segments, but UDP does not have any acknowledgment segment.\nTCP is heavy-weight, and UDP is lightweight.\n Features of TCP\n1) Delivery Acknowledgements\n2) Re transmission\n3) Delays transmission when the network is congested\n4) Easy Error detection\nFeature of UDP:\n1) Supports bandwidth-intensive applications that tolerate packet loss\n2) Less delay\n3) It sends the bulk quantity of packets.\n4) Possibility of the Data loss\n5) Allows small transaction ( DNS lookup)"
+  },
+  {
+    "id": 231,
+    "formulation": "How to find out free space on the disk? (df)",
+    "category": 17,
+    "answer": "display disk usage in a more human-readable format by adding the 'h option: df 'h"
+  },
+  {
+    "id": 232,
+    "formulation": "How to find out a size of a directory? (du)",
+    "category": 17,
+    "answer": "du (disc usage) command estimates file_path space usage\nThe options -sh are (from man du):\n\n  -s, --summarize\n         display only a total for each argument\n\n  -h, --human-readable\n         print sizes in human readable format (e.g., 1K 234M 2G)\nTo check more than one directory and see the total, use du -sch:\n\n  -c, --total\n         produce a grand total"
+  },
+  {
+    "id": 234,
+    "formulation": "What is the purpose of JMS",
+    "category": 18,
+    "answer": "JMS is essentially a high-level framework for sending messages between nodes, with options for discovery, robustness, etc.\nOne useful use case is when you want a client and a server to talk to one another, but without the client actually having the server's address (E.g., you may have more than one server). The client only needs to know the broker and the queue/topic name, and the server can connect as well.\nJMS also adds robustness."
+  },
+  {
+    "id": 235,
+    "formulation": "Difference between topic and queue",
+    "category": 18,
+    "answer": "Queues and Topics in JMS represent two different models - point to point and publish/subscribe. Topics will keep a message until all clients receive them, all subscribers handling them. Queues will wait for the first consumer to pull the message, and consider it read at that point.\nThe design requirements on when to use queues are simple if you think in terms of real-world examples:\nSubmit online order (exactly-once processing to avoid charging credit card twice) \nPrivate peer-to-peer chat (exactly one receiver for each message)\nParallel task distribution (distribute tasks amongst many workers in a networked system)\nExamples for when to use topics:\nNews broadcast to multiple subscribers; notification service, stock ticker, etc.\nEmail client (unique durable subscriber; you still get emails when you're disconnected)"
+  },
+  {
+    "id": 236,
+    "formulation": "What are message selectors? How do they work?",
+    "category": 18,
+    "answer": "Message Selectors allow you to filter the messages that a MessageConsumer will receive. The filter is a relatively complex language that mimics the syntax of an SQL WHERE clause. The selector can use all message headers and properties for filtering, but can not use the message content.\nSelectors are mostly useful for Topics that broadcast a very large number of messages to its subscribers.\n\nThey way selectors work depends on the destination type:\n\nOn Queues, only messages that match the selector will be returned. Others stay in the queue (and thus can be read by a MessageConsumer with different selector).\nOn Topics, messages that do not match the selector will be ignored as if they have not been published."
+  },
+  {
+    "id": 237,
+    "formulation": "What means message durability and how to achieve it?",
+    "category": 18,
+    "answer": "The word \"Durable\" is more applicable to Topics than queues. A durable subscription is one where the publications for a subscriber are stored by the messaging provider when that subscriber is not running. Once the subscriber becomes active, these stored messages will be delivered to that subscriber. For non-Durable subscribers will not receive any publications if they are not active.\n\nWith respect to Queues, the messages are held in the queue till someone receives them or they expire. The messages can be persistent meaning they will survive restart of messaging provider and non-persistent where the messages are lost when messaging provider goes down."
+  },
+  {
+    "id": 238,
+    "formulation": "What are the different types of messages available in the JMS API?",
+    "category": 18,
+    "answer": "Different types of messages available in JMS API are TextMessage, BytesMessage, StreamMessage, ObjectMessage and MapMessage. As already known, JMS API offers specialised service of transmitting messages between brokers and nodes in a single direction asynchronously. The message bodies are available in javax.jms.Message of JMS API. However, actual classes of the messages are not available as part of API and they are defined by the corresponding providers.\nExample:\n//Create a TextMessage\nTextMessage sampleTextMsg = session.createTextMessage();\n//Store values within TextMessage\nsampleTextMsg.setText('sample content');\n// Retrieve values from TextMessage\nString storedText = sampleTextMsg.getText();"
+  },
+  {
+    "id": 239,
+    "formulation": "Kafka: Describe an Offset.",
+    "category": 18,
+    "answer": "The offset is a simple integer number that is used by Kafka to maintain the current position of a consumer. That's it. The current offset is a pointer to the last record that Kafka has already sent to a consumer in the most recent poll. So, the consumer doesn't get the same record twice because of the current offset"
+  },
+  {
+    "id": 240,
+    "formulation": "Kafka: What are advantages and significanc of Kafka technology?",
+    "category": 18,
+    "answer": "Apache Kafka is more suitable to handle a large volume of data due to its scalability and high availability while JMS systems are used when you need to work with multi-node clusters and highly complicated systems."
+  },
+  {
+    "id": 241,
+    "formulation": "Kafka: What is a partitioning key?",
+    "category": 18,
+    "answer": "Kafka messages are key/value pairs. The key is commonly used for partitioning and is particularly important if modeling a Kafka topic as a table in KSQL (or KTable in Kafka Streams) for query or join purposes."
+  },
+  {
+    "id": 242,
+    "formulation": "Kafka: How to ensure message uniqueness?",
+    "category": 18,
+    "answer": "Exactly once semantics has two parts: avoiding duplication during data production and avoiding duplicates during data consumption.\n\nThere are two approaches to getting exactly once semantics during data production:\n\n1) Use a single-writer per partition and every time you get a network error check the last message in that partition to see if your last write succeeded\n2) Include a primary key (UUID or something) in the message and deduplicate on the consumer."
+  },
+  {
+    "id": 243,
+    "formulation": "Kafka: Is it possible to get the message offset after producing?",
+    "category": 18,
+    "answer": ""
+  },
+  {
+    "id": 245,
+    "formulation": "SQL Injection",
+    "category": 19,
+    "answer": "SQL Injection\nSQL injection is a code injection technique that might destroy your database.\nSQL injection is one of the most common web hacking techniques.\nSQL injection is the placement of malicious code in SQL statements, via web page input."
+  },
+  {
+    "id": 246,
+    "formulation": "Cross-site request forgery",
+    "category": 19,
+    "answer": "For a CSRF attack to be possible, three key conditions must be in place:\n\nA relevant action. There is an action within the application that the attacker has a reason to induce. This might be a privileged action (such as modifying permissions for other users) or any action on user-specific data (such as changing the user's own password).\nCookie-based session handling. Performing the action involves issuing one or more HTTP requests, and the application relies solely on session cookies to identify the user who has made the requests. There is no other mechanism in place for tracking sessions or validating user requests.\nNo unpredictable request parameters. The requests that perform the action do not contain any parameters whose values the attacker cannot determine or guess. For example, when causing a user to change their password, the function is not vulnerable if an attacker needs to know the value of the existing password.\nFor example, suppose an application contains a function that lets the user change the email address on their account. When a user performs this action, they make an HTTP request like the following:\n\nPOST /email/change HTTP/1.1\nHost: vulnerable-website.com\nContent-Type: application/x-www-form-urlencoded\nContent-Length: 30\nCookie: session=yvthwsztyeQkAPzeQ5gHgTvlyxHfsAfE\n\nemail=wiener@normal-user.com\n\nThis meets the conditions required for CSRF:\n\nThe action of changing the email address on a user's account is of interest to an attacker. Following this action, the attacker will typically be able to trigger a password reset and take full control of the user's account.\nThe application uses a session cookie to identify which user issued the request. There are no other tokens or mechanisms in place to track user sessions.\nThe attacker can easily determine the values of the request parameters that are needed to perform the action.\nWith these conditions in place, the attacker can construct a web page containing the following HTML:\n\n<html>\n  <body>\n    <form action=\"https://vulnerable-website.com/email/change\" method=\"POST\">\n      <input type=\"hidden\" name=\"email\" value=\"pwned@evil-user.net\" />\n    </form>\n    <script>\n      document.forms[0].submit();\n    </script>\n  </body>\n</html>\n\nIf a victim user visits the attacker's web page, the following will happen:\n\nThe attacker's page will trigger an HTTP request to the vulnerable web site.\nIf the user is logged in to the vulnerable web site, their browser will automatically include their session cookie in the request (assuming SameSite cookies are not being used).\nThe vulnerable web site will process the request in the normal way, treat it as having been made by the victim user, and change their email address."
+  },
+  {
+    "id": 247,
+    "formulation": "Reflected Cross-site scripting",
+    "category": 19,
+    "answer": "What is reflected cross-site scripting?\nReflected cross-site scripting (or XSS) arises when an application receives data in an HTTP request and includes that data within the immediate response in an unsafe way.\n\nSuppose a website has a search function which receives the user-supplied search term in a URL parameter: https://insecure-website.com/search?term=gift\n\nThe application echoes the supplied search term in the response to this URL: <p>You searched for: gift</p>\n\nAssuming the application doesn't perform any other processing of the data, an attacker can construct an attack like this:\nhttps://insecure-website.com/status?message=<script>/*+Bad+stuff+here...+*/</script>\n\nThis URL results in the following response:\n<p>You searched for: <script>/* Bad stuff here... */</script></p>\n\nIf another user of the application requests the attacker's URL, then the script supplied by the attacker will execute in the victim user's browser, in the context of their session with the application."
+  },
+  {
+    "id": 248,
+    "formulation": "Click jacking",
+    "category": 19,
+    "answer": "What is clickjacking?\nClickjacking is an interface-based attack in which a user is tricked into clicking on actionable content on a hidden website by clicking on some other content in a decoy website. Consider the following example:\n\nA web user accesses a decoy website (perhaps this is a link provided by an email) and clicks on a button to win a prize. Unknowingly, they have been deceived by an attacker into pressing an alternative hidden button and this results in the payment of an account on another site. This is an example of a clickjacking attack. The technique depends upon the incorporation of an invisible, actionable web page (or multiple pages) containing a button or hidden link, say, within an iframe. The iframe is overlaid on top of the user's anticipated decoy web page content. This attack differs from a CSRF attack in that the user is required to perform an action such as a button click whereas a CSRF attack depends upon forging an entire request without the user's knowledge or input.\nProtection against CSRF attacks is often provided by the use of a CSRF token: a session-specific, single-use number or nonce. Clickjacking attacks are not mitigated by the CSRF token as a target session is established with content loaded from an authentic website and with all requests happening on-domain. CSRF tokens are placed into requests and passed to the server as part of a normally behaved session. The difference compared to a normal user session is that the process occurs within a hidden iframe."
+  },
+  {
+    "id": 249,
+    "formulation": "Session token in URL",
+    "category": 19,
+    "answer": "Sensitive information within URLs may be logged in various locations, including the user's browser, the web server, and any forward or reverse proxy servers between the two endpoints. URLs may also be displayed on-screen, bookmarked or emailed around by users. They may be disclosed to third parties via the Referer header when any off-site links are followed. Placing session tokens into the URL increases the risk that they will be captured by an attacker."
+  },
+  {
+    "id": 250,
+    "formulation": "Insecure direct object references",
+    "category": 19,
+    "answer": "Insecure direct object references (IDOR) are a type of access control vulnerability that arises when an application uses user-supplied input to access objects directly. Consider a website that uses the following URL to access the customer account page, by retrieving information from the back-end database:\n\nhttps://insecure-website.com/customer_account?customer_number=132355\n\nHere, the customer number is used directly as a record index in queries that are performed on the back-end database. If no other controls are in place, an attacker can simply modify the customer_number value, bypassing access controls to view the records of other customers. This is an example of an IDOR vulnerability leading to horizontal privilege escalation."
+  }
+]

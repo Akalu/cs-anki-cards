@@ -1,0 +1,19 @@
+<!-- Classes main-div and example-card are catagorized in .css file -->
+<div class="main-div">
+
+  <mat-card class="mat-card" cdkFocusInitial (keydown.arrowLeft)="arrowLeftEvent()" (keydown.arrowRight)="arrowRightEvent()">
+    <mat-card-title>Question {{question.id}}.  {{question.formulation}}</mat-card-title>
+    <mat-card-content class="mat-card-content">
+       <pre class="response-class"> {{question.answer}} </pre>
+    </mat-card-content>
+    <mat-card-actions align="center">
+
+      <button mat-button (click)="goFirst()" [disabled]="first">First</button>
+      <button mat-button (click)="changeCounter(-1)"  [disabled]="first">Previous</button>
+
+      <button mat-button (click)="changeCounter(1)"  [disabled]="last">Next</button>
+      <button mat-button (click)="goLast()" [disabled]="last">Last</button>
+
+    </mat-card-actions>
+  </mat-card>
+</div>
