@@ -10,6 +10,9 @@
     "e2e": "ng e2e",
     "heroku-postbuild": "ng build --prod"
   },
+  "author": "Aliaksei Kaliutau <k5771k@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/Akalu/cs-anki-cards#readme",
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.0.5",
